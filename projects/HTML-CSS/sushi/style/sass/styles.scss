@@ -1,0 +1,95 @@
+@import "./reset";
+
+$red: #a50303;
+$black: #000;
+$yellow: rgba(233, 145, 5, 1);
+$yellowTransparent: rgba(233, 145, 5, 0.7);
+
+body,
+html {
+   background: #ddd;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.img-container {
+   position: relative;
+
+   &:hover .content,
+   &:hover h1 {
+      background: $yellow;
+   }
+
+   h1 {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      padding: 10px 20px;
+      transform: translate(-50%, -100%);
+      border-radius: 10px;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+      background: $yellowTransparent;
+      backdrop-filter: blur(20px);
+      color: $red;
+      text-transform: uppercase;
+      font-weight: 700;
+      transition: 0.3s ease-in-out;
+   }
+
+   img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+   }
+
+   .content {
+      position: absolute;
+      backdrop-filter: blur(2px);
+      background: $yellowTransparent;
+      border-radius: 0 0 10px 10px;
+      padding: 0px 20px 0 20px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: 0.3s ease-in-out;
+
+      h3 {
+         color: $red;
+         font-size: 22px;
+      }
+      p {
+         font-size: 17px;
+         color: $black;
+      }
+   }
+}
+
+@media screen and (max-width: 740px) {
+   .img-container {
+      width: 96%;
+   }
+}
+@media screen and (max-width: 620px) {
+   .img-container h1 {
+      width: 90%;
+      text-align: center;
+   }
+}
+@media screen and (max-width: 500px) {
+   .img-container {
+      h1 {
+         font-size: 25px;
+      }
+      .content {
+         h3 {
+            font-size: 18px;
+         }
+         p {
+            font-size: 16px;
+         }
+      }
+   }
+}

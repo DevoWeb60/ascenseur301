@@ -1,0 +1,174 @@
+@import "./reset";
+
+$green: #50932e;
+$mauve: #5b5a75;
+$grey: #dedee3;
+
+body,
+html {
+   font-size: 16px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: $mauve;
+   line-height: 24px;
+}
+p {
+   padding: 20px;
+}
+.container {
+   width: 960px;
+   margin: 0 auto;
+
+   header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+
+      h1 {
+         position: relative;
+
+         a {
+            display: block;
+            height: 107px;
+            width: 100;
+         }
+      }
+
+      h2 {
+         color: $mauve;
+         font-weight: 400;
+         font-size: 30px;
+      }
+   }
+
+   .main {
+      margin-bottom: 100px;
+      img {
+         width: 100%;
+         border: 10px solid $mauve;
+      }
+   }
+
+   .second {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+
+      section h2 {
+         color: $green;
+         font-size: 20px;
+         font-weight: 700;
+         text-transform: uppercase;
+         margin-bottom: 20px;
+      }
+
+      .design,
+      .activity {
+         width: 49.5%;
+      }
+
+      .design img {
+         width: 100%;
+      }
+
+      .activity {
+         h2 {
+            padding-left: 40px;
+         }
+
+         ul {
+            list-style: none;
+
+            li {
+               background: url(../../src/puce.png) no-repeat;
+               padding-left: 30px;
+               color: #000;
+               margin-bottom: 20px;
+            }
+         }
+      }
+   }
+
+   footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 20px;
+      background: $grey;
+
+      a {
+         text-decoration: none;
+         color: $mauve;
+         transition: 0.3s ease-in-out;
+
+         &:hover {
+            color: #50932e;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 960px) {
+   .container {
+      width: 100%;
+   }
+}
+@media screen and (max-width: 750px) {
+   .container {
+      header {
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+
+         h2 {
+            font-size: 24px;
+         }
+      }
+
+      .main {
+         img {
+            border: none;
+         }
+
+         margin-bottom: 10px;
+      }
+
+      .second {
+         flex-direction: column;
+
+         section h2 {
+            text-align: center;
+         }
+
+         .design,
+         .activity {
+            width: 100%;
+            padding: 0 20px;
+         }
+         .design {
+            margin-bottom: 50px;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 500px) {
+   .container {
+      footer {
+         flex-direction: column;
+         justify-content: center;
+         padding-bottom: 0;
+
+         a {
+            text-align: center;
+            margin-bottom: 30px;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 385px) {
+   .container header h2 {
+      font-size: 20px;
+   }
+}

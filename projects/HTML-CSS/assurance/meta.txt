@@ -1,0 +1,1 @@
+Responsive;Flexbox|Assaisonnement de flexbox sur son lit de zeste de JavaScript locale d'AOS

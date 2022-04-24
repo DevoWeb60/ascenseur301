@@ -1,0 +1,46 @@
+.carousel-logo {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 6vw;
+}
+.carousel-indicators {
+   position: absolute;
+   top: 101%;
+   left: 97%;
+   transform: translateX(-100%);
+   margin: 0;
+   width: fit-content;
+
+   button[data-bs-target] {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      margin: 0 5px;
+      &.active {
+         background-color: $red;
+      }
+   }
+}
+.carousel-control-prev,
+.carousel-control-next {
+   top: 100%;
+   left: 0;
+   height: 45px;
+   width: 45px;
+   background: $black;
+
+   &:hover {
+      background: $red;
+   }
+
+   .carousel-control-next-icon,
+   .carousel-control-prev-icon {
+      width: 60%;
+      height: 60%;
+   }
+}
+.carousel-control-next {
+   transform: translateX(100%);
+}

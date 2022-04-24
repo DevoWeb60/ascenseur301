@@ -1,0 +1,27 @@
+@import "./reset";
+
+body,
+html {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+}
+
+.container {
+   width: 50%;
+   overflow: hidden;
+   border-radius: 3px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+   img {
+      display: block;
+      width: 100%;
+      transition: 0.3s ease-in-out;
+   }
+
+   &:hover img {
+      transform-origin: 55% 65%;
+      transform: scale(4);
+   }
+}

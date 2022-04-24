@@ -1,0 +1,37 @@
+
+Contenu : 285px centrer
+
+Titre : 24px Open Sans #002b4f
+Texte : 13px Open Sans #002b4f
+
+
+
+Couleur bordure : #dee2e6
+
+Couleur de fond :
+	#ffffff
+	#e5e9ec
+	#f2f2f2
+
+
+
+
+
+Missions à la une
+
+
+Ingénieur SIEM Support Ticketing - Sécurité
+Ingénieur Datacenter
+Consultant Sécurité - Systèmes industriels
+Ingénieur Teams (H/F)
+Ingénieur bases de données H/F
+Intégration Continue Contexte DATA DEVOPS
+Développeur Backend (H/F)
+Développeur JAVA H/F
+Ingénieur mobilité
+Consultant UX/UI
+Chef de projet Infrastructure (H/F)
+Spécialiste de l’intégration des données
+UI UX Designer avec compétence UX Data (H/F)
+Ingénieur DevOps + AWS + Centreon
+

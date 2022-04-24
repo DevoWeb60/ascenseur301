@@ -1,0 +1,60 @@
+@import "./reset";
+
+body,
+html {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+   position: relative;
+   width: 456px;
+   margin: 0 auto;
+   overflow: hidden;
+   transform: translateY(100%) scale(1.5);
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+   img {
+      width: 100%;
+      display: block;
+   }
+
+   .content {
+      position: absolute;
+      display: flex;
+      bottom: 25px;
+      left: 25px;
+
+      p {
+         margin: 0;
+         color: white;
+         font-weight: bold;
+         font-size: 25px;
+         padding: 15px;
+
+         &.red {
+            background: red;
+            border-radius: 25px 0 0 25px;
+            margin-right: 5px;
+         }
+         &.black {
+            background: #000;
+            border-radius: 0 25px 25px 0;
+         }
+      }
+   }
+   .licence {
+      text-align: center;
+      width: 50%;
+      position: absolute;
+      bottom: 15%;
+      right: -12%;
+      margin: 0;
+      padding: 5px;
+      background: #ff830f;
+      color: #fff;
+      font-weight: bold;
+      font-size: 25px;
+      transform: rotate(-45deg);
+   }
+}

@@ -1,0 +1,57 @@
+
+Police : Roboto
+
+Corps de texte : 16px
+
+Menu : 20px
+titre en rouge : 50px
+titre cupcackes, confiseries... : 24px
+pied de page : 16px
+
+
+Couleur de texte : #3e2918
+Couleur de fond principal : #ffffff
+Couleur rose : #eb66a1
+Couleur marron : #3e2918
+Couleur bleu : #b8dfde
+Couleur rouge : #e4010d
+
+
+
+Largeur du site : 900px centrer
+
+---------------------------------------------
+
+
+
+Cupcakes & Confiseries
+C'est aussi parce que c'est beau que c'est bon !
+facebook twitter pinterest google+ instagram
+Accueil
+Cupcakes
+Confiseries
+Biscuits
+Gâteaux
+Le Blog
+Contact
+Visuel
+Découvez nos
+Minions
+Cupcackes en exclusivité
+De mignons éléments de décors à faire figurer
+sur vos cupcakes, gâteaux et autres délices culinaires.
+
+Découvrez l’ensemble de nos minions
+sur notre boutique en ligne
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ir including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ir including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ir including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ir including versions of Lorem Ipsum.
+
+Acceuil Le blog Mentions légales Plan du site Contact
+
+© Cupcakes & Confiseries

@@ -1,0 +1,15 @@
+@mixin colorCard($class, $color) {
+   &.#{$class} {
+      border-color: $color;
+
+      .btn {
+         background: $color;
+         border: 2px solid $color;
+
+         &:hover {
+            background: transparent;
+            color: $color;
+         }
+      }
+   }
+}

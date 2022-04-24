@@ -1,0 +1,588 @@
+@import "_reset";
+@import "_mixins";
+
+$primary: #ffba49;
+$favories: #22e2c8;
+$extensions: #a685fb;
+
+$bgWhite: rgba(255, 255, 255, 0.6);
+$boxShadow: rgba(0, 0, 0, 0.3);
+$white: #fff;
+$anthracite: #333;
+
+$animation: 0.4s ease-in-out;
+
+$js: #ffbb00;
+$html-css: #3c70d7;
+$css: #0f55e1;
+$html: #e96d00;
+$responsive: #ae00e2;
+$php: #724ae0;
+$bootstrap: #2f00b2;
+$wordpress: #4769ef;
+$prestashop: #f55757;
+$flexbox: #57a9f5;
+$maquettes: #fa5246;
+
+$sidebar: 23%;
+
+@include dynamicLanguageColor($js, "javascript");
+@include dynamicLanguageColor($html-css, "html-css");
+@include dynamicLanguageColor($css, "css");
+@include dynamicLanguageColor($html, "html");
+@include dynamicLanguageColor($php, "php");
+@include dynamicLanguageColor($responsive, "responsive");
+@include dynamicLanguageColor($bootstrap, "bootstrap");
+@include dynamicLanguageColor($wordpress, "wordpress");
+@include dynamicLanguageColor($prestashop, "prestashop");
+@include dynamicLanguageColor($flexbox, "flexbox");
+@include dynamicLanguageColor($maquettes, "maquettes");
+@include dynamicLanguageColor($favories, "favoris");
+@include dynamicLanguageColor($extensions, "extensions");
+
+canvas {
+    // width: calc(800px / 1.7);
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px auto;
+    animation: 1s ease-in-out normal animateCanvas;
+    box-shadow: $boxShadow;
+
+    &.active {
+        display: block;
+    }
+}
+
+body {
+    @include bg-gradient($primary, darken($primary, 40%));
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    position: relative;
+    background: $anthracite;
+    width: $sidebar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 5px 0 10px $boxShadow;
+
+    h1 {
+        color: $white;
+        text-align: center;
+        font-weight: 100;
+
+        span {
+            font-weight: 900;
+            color: $primary;
+            text-transform: uppercase;
+        }
+    }
+
+    span.search {
+        width: 40px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 35px;
+        right: 10px;
+        cursor: pointer;
+        transition: $animation;
+
+        input {
+            border-radius: 9999px;
+            width: 0;
+            padding: 0;
+            font-size: 20px;
+            outline: none;
+            border: none;
+            background: lighten($primary, 20%);
+            color: $white;
+            transition: $animation;
+        }
+
+        &.active {
+            width: 90%;
+
+            input {
+                color: $anthracite;
+                width: 70%;
+                padding: 10px 0px 10px 20px;
+                margin-left: 10px;
+            }
+        }
+
+        svg {
+            width: 40px;
+            height: 40px;
+
+            path {
+                fill: $primary;
+                stroke: $primary;
+                transition: $animation;
+            }
+
+            &:hover path {
+                fill: $white;
+                stroke: $white;
+            }
+        }
+    }
+
+    a.link {
+        border: 2px solid $primary;
+        padding: 10px 20px;
+        font-size: 20px;
+        color: $primary;
+        border-radius: 9999px;
+        transition: $animation;
+
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+
+        &.favories {
+            border-color: $favories;
+            color: $favories;
+
+            &:hover {
+                background-color: $favories;
+                color: $white;
+            }
+        }
+        &.extensions {
+            border-color: $extensions;
+            color: $extensions;
+
+            &:hover {
+                background-color: $extensions;
+                color: $white;
+            }
+        }
+    }
+
+    .countProject {
+        border: 2px solid $primary;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 30px;
+        color: $primary;
+        margin: 30px 0 10px 0;
+        transition: $animation;
+
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: flex-end;
+        width: 100%;
+
+        li {
+            position: relative;
+            width: 100%;
+            text-align: center;
+
+            a {
+                position: relative;
+                display: block;
+                color: $primary;
+                font-size: 25px;
+                padding: 20px 0;
+                transition: 0.2s ease-in-out;
+
+                &.disabled {
+                    opacity: 0.2;
+                }
+
+                &:hover {
+                    color: transparent;
+                }
+
+                &::before {
+                    content: attr(data-name);
+                    white-space: nowrap;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: transparent;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 5%;
+                    transition: $animation;
+                }
+
+                &:hover::before,
+                &.active::before {
+                    width: 105%;
+                    border-radius: 0 5px 5px 0;
+                    color: $white;
+                    box-shadow: 0 0 10px $boxShadow;
+                }
+            }
+        }
+    }
+
+    .page-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+
+        a {
+            margin-right: 5px;
+        }
+    }
+}
+.container {
+    position: relative;
+    width: 100% - $sidebar;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 20px;
+    padding-top: 0;
+
+    .tools {
+        box-shadow: 3px 3px 10px $boxShadow;
+        width: 90%;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.5);
+        margin-bottom: 15px;
+        padding: 10px 40px 10px 40px;
+        border-radius: 0 0 50px 50px;
+
+        .tools-container {
+            display: flex;
+            flex-wrap: wrap;
+
+            .tool {
+                background: rgba(0, 0, 0, 0.5);
+                margin-right: 10px;
+                padding: 10px 15px;
+                border-radius: 50px;
+                color: $white;
+                font-size: 12px;
+                cursor: pointer;
+                transition: background $animation;
+
+                h3 {
+                    margin: 0;
+                }
+
+                &:hover {
+                    background: #000;
+                }
+            }
+        }
+    }
+
+    .category-container {
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+        box-shadow: 3px 3px 10px $boxShadow;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        h2 {
+            padding: 10px;
+            color: $white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px $boxShadow;
+            opacity: 0.8;
+        }
+
+        .project-container .card-project {
+            h3 {
+                color: $anthracite;
+            }
+
+            &:hover h3 {
+                color: $white;
+            }
+        }
+    }
+
+    .project-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        a {
+            width: 25%;
+            flex-grow: 2;
+        }
+        .card-project {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 10px $boxShadow;
+            background: $bgWhite;
+            transition: $animation;
+
+            &:hover {
+                transform: scale(1.05);
+                background: rgba(0, 0, 0, 0.5);
+
+                h3 {
+                    color: $white;
+                }
+
+                .badge-container .badge {
+                    background: $white;
+                }
+
+                .img-container {
+                    img {
+                        transform: scale(1.5);
+                    }
+                    p {
+                        opacity: 1;
+                    }
+                }
+            }
+            h3 {
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: $anthracite;
+                font-size: 30px;
+                text-align: center;
+                transition: $animation;
+            }
+            .img-container {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                border-radius: 5px;
+
+                img {
+                    transition: transform $animation;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                }
+
+                p {
+                    opacity: 0;
+                    position: absolute;
+                    z-index: 2;
+                    background: rgba(0, 0, 0, 0.8);
+                    color: $white;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: 0;
+                    border: 2px solid $white;
+                    border-radius: 5px;
+                    padding: 0px 10px 10px 10px;
+                    transition: $animation;
+                    white-space: pre-line;
+                    line-height: 140%;
+                    font-size: 14px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .badge-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+
+                .badge {
+                    width: 24%;
+                    flex-grow: 2;
+                    display: inline-block;
+                    padding: 7px 12px;
+                    background: $bgWhite;
+                    color: #000;
+                    margin: 10px 5px;
+                    border-radius: 0px 5px 5px 0px;
+                    border-left: 3px solid $white;
+                    font-weight: 600;
+                    transition: background $animation;
+                }
+            }
+        }
+    }
+    .no-project {
+        text-align: center;
+        border-radius: 5px;
+        padding: 30px;
+        background: rgba(0, 0, 0, 0.5);
+        color: $white;
+        width: 60%;
+        margin: 10px auto;
+
+        h2 {
+            margin: 0;
+            font-size: 50px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .browser-container {
+        .download {
+            display: block;
+            background: $bgWhite;
+            font-size: 25px;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 10px;
+            color: $anthracite;
+            border-radius: 5px;
+            margin: 20px 0;
+            transition: $animation;
+            border: 3px solid transparent;
+
+            &:hover {
+                border-color: $bgWhite;
+                color: $bgWhite;
+                background: transparent;
+            }
+        }
+        .category {
+            display: flex;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 5px;
+            box-shadow: 0 0 15px $boxShadow;
+            padding: 20px;
+            margin: 10px 0;
+
+            h2 {
+                color: $white;
+            }
+
+            .item {
+                background: $bgWhite;
+                color: $anthracite;
+                padding: 10px;
+                border-radius: 5px;
+                margin: 10px 0;
+                box-shadow: 3px 3px 15px $boxShadow;
+                border: 2px solid transparent;
+                transition: $animation;
+
+                &:hover {
+                    background: transparent;
+                    color: $white;
+                    border-color: $bgWhite;
+                }
+
+                .header {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1140px) {
+    .sidebar {
+        width: 30%;
+    }
+    .container {
+        width: 70%;
+
+        .project-container a {
+            width: 40%;
+            flex-grow: 1;
+        }
+    }
+}
+@media screen and (max-width: 900px) {
+    .sidebar .page-container {
+        margin-top: 10px;
+
+        a {
+            margin-top: 10px;
+        }
+    }
+    .container .project-container a.card-project h3 {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .sidebar {
+        width: 40%;
+    }
+    .container {
+        width: 60%;
+
+        .project-container a {
+            width: 90%;
+            flex-grow: 1;
+
+            &.card-project h3 {
+                font-size: 25px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 750px) {
+    .sidebar {
+        width: 290px;
+    }
+    .container {
+        width: calc(100% - 290px);
+    }
+}
+
+@keyframes animateCanvas {
+    0% {
+        display: block;
+    }
+    1% {
+        opacity: 0;
+        max-height: 0;
+    }
+    100% {
+        opacity: 1;
+        max-height: 500px;
+    }
+}

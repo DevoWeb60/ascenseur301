@@ -1,0 +1,6 @@
+
+Rendre le site Responsive, avec les points de rupture suivant :
+- 480px
+- 640px
+- 980px
+- 1100px

@@ -1,0 +1,31 @@
+
+Contenu : 285px centrer
+
+Titre : 20px Open Sans #ffffff
+Texte : 13px Open Sans #383d41
+
+Couleur bordure : #dee2e6
+
+Couleur de fond : 
+- #d6d8db
+- #002b4f
+
+Couleur bordure entre éléments : rgba(0,0,0,.125)
+
+
+
+
+Forum : derniers sujets
+
+
+Création d'une société Sasu, comment faire ?
+TVA et achat de mobilier ou electromenager
+Comptabilisation d'une facture sur l'exercice précédent
+Conseil pour TJM mission courte
+Dév en big data et machine learning, quelles technos ?
+Indemnités kilométriques des trajets vers un établissement secondaire
+Il y a un intérêt d'apprendre le bulgare ?
+Formation Consultant SAP
+Faut il cacher ou non son statut d'indep en clientèle ?
+Puis-je récupérer la TVA sur achat d'un téléphone portable ?
+

@@ -1,0 +1,44 @@
+<a
+    href="https://chrome.google.com/webstore/detail/ohcpnigalekghcmgcdcenkpelffpdolg"
+    title="Color Picker pour récuperer une couleur au pixel près sur tout une page web sous format hexadimal ou rgb"
+    >ColorPick Eyedropper
+<a
+    href="https://chrome.google.com/webstore/detail/mbnbehikldjhnfehhnaidhjhoofhpehk"
+    title="Permet de récupérer les typo, assets (images) et couleurs d'un site"
+    >CSS Peeper
+<a
+    href="https://chrome.google.com/webstore/detail/fdpohaocaechififmbbbbbknoalclacl"
+    title="Ressort une capture d'écran de tout un site web. Exportation en PDF ou image et éditeur d'image intégrer"
+    >GoFullPage - Full Page Screen Capture
+<a
+    href="https://chrome.google.com/webstore/detail/amaaokahonnfjjemodnpmeenfpnnbkco"
+    title="Exemple : Je cherche une propriété CSS sur Google, l'extension va me proposer directement des bouts de code lié à cette propriété"
+    >Grepper
+<a
+    href="https://chrome.google.com/webstore/detail/cnpniohnfphhjihaiiggeabnkjhpaldj"
+    title="Téléchargement des images d'un site web"
+    >Image Downloader
+<a
+    href="https://chrome.google.com/webstore/detail/gbmdgpbipfallnflgajpaliibnhdgobh"
+    title="Améliore la lecture des fichiers JSON via le navigateur"
+    >JSON Viewer
+<a
+    href="https://chrome.google.com/webstore/detail/haafibkemckmbknhfkiiniobjpgkebko"
+    title="Faire de la veille sans agrégateur relou ou l'on oublie d'aller. Panda s'intégre en page d'accueil du navigateur"
+    >Panda 5 - Your favorite websites in one place
+<a
+    href="https://chrome.google.com/webstore/detail/jhggpmcfjkkaeonckilhekpkfcalgank"
+    title="Fait une capture d'écran d'un site et l'intègre à un Mockups sobre"
+    >Screely: Instant Browser Mockups
+<a
+    href="https://chrome.google.com/webstore/detail/bjogjfinolnhfhkbipphpdlldadpnmhc"
+    title="Observe la structure du site pour donner des détails sur le niveau et les axes d'amélioration du SEO"
+    >SEO META in 1 CLICK
+<a
+    href="https://chrome.google.com/webstore/detail/gppongmhjkpfnbhagpmjfkannfbllamg"
+    title="Fournis, dans une certains limite, les technos utilisées par le site web"
+    >Wappalyzer - Technology profiler
+<a 
+    href="https://chrome.google.com/webstore/detail/apalagnadaipfbckpdghfbahagdcldka" 
+    title="Voici un outil qui vous permettra de réaliser très simplement des screenshots de pages web complètes aux format WEBP ou autre"
+    >Screenshot Master: Capture d'une page complète

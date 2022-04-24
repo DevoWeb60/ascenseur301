@@ -1,0 +1,34 @@
+Police : Georgia 16px #000000
+
+
+Titre 1 : 55px
+Titre 2 : 28px
+Titre 3 : 24px
+
+Couleur de la date : #cccccc
+
+auteur et date : 14px
+
+
+
+
+Téléphonie : l’iPhone 11 d’Apple va-t-il passer au stylet ?
+Apple lève le voile ce mardi soir sur son tout nouveau smartphone, l’iPhone 11 qui pourrait, pour la première fois de son histoire, se piloter non plus seulement avec les doigts mais avec un stylet.
+
+
+Par Aymeric Renou
+
+Le 9 septembre 2019 à 15h42, modifié le 9 septembre 2019 à 16h13
+
+À quoi ressemblera le nouveau smartphone qu'Apple présente ce mardi soir à l'occasion d'une conférence organisée dans son siège social de Cupertino (Etats-Unis) ? On en sait déjà beaucoup, grâce à d'innombrables fuites et rumeurs qui circulent depuis plusieurs semaines sur quelques sites Internet de distributeurs de smartphones ou de fabricants d'étuis de protection.
+
+cet iPhone 11 se déclinera en trois modèles, l'iPhone 11, 11 Pro et 11 Pro Max. Côté style, rien de neuf puisque l'appareil reprendra au millimètre près les traits de l'actuel iPhone XS. Sous le capot, les trois versions de l'appareil carbureront grâce à la puissance d'une nouvelle puce, l'A13, logiquement plus rapide et moins gourmande en énergie que celle à qui elle succède.
+
+L'iPhone 11 devrait également être capable d'offrir une charge sans-fil réversible, c'est-à-dire qu'il pourra recharger par induction un appareil compatible — un autre iPhone ou les écouteurs intra-auriculaires sans fil AirPods par exemple — en le posant simplement sur sa face arrière.
+
+3 capteurs photos
+Les versions les plus haut de gamme, le 11 Pro et le 11 Pro Max avec son très grand écran seront, elles, équipées d'un triple capteur photo. De quoi réaliser des clichés en zoomant, en profitant d'un grand-angle ou encore de jouer avec la profondeur de champ. Une manière aussi, pour Apple de rester compétitif face aux derniers modèles concurrents, ceux de Samsung et Huawei en tête, fonctionnant sous Android et qui offrent depuis de nombreux mois trois et même quatre capteurs photo à leurs utilisateurs.
+
+Une petite surprise pourrait tout de même venir épicer une conférence dont on connaît donc déjà l'essentiel. Pour la première fois de son histoire, l'iPhone pourrait bien se piloter avec un stylet. Une idée que le fondateur d'Apple Steve Jobs, qui avait définitivement réglé son sort à l'accessoire en 2007 lors de la présentation du premier iPhone afin de mieux vanter l'écran tactile de son smartphone, aurait certainement rejetée.
+
+Le marché de la téléphonie mobile a bien changé depuis, et le stylet s'offre depuis 2016 une incursion dans l'univers de la marque à la pomme avec l'Apple Pen, taillé sur mesure pour les professionnels du graphisme utilisant un iPad et ayant besoin d'une grande précision dans leurs tracés.

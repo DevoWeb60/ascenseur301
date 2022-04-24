@@ -1,0 +1,5 @@
+CSS;JavaScript|
+Je savais pas trop quoi faire avec l'exercice du filtre.
+Du coup, j'ai pécho un fichier .JSON d'un "Pokédex", en anglais évidemment, pour simuler un appel à la base de donnée. 
+Après... C'est parti en couille. 
+Facebook à voulu le racheter mais 4 milliards c'est pas assez.

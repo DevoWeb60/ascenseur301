@@ -1,0 +1,89 @@
+@import "./reset";
+
+$primary: #9a00009c;
+$second: #00a6008f;
+
+body {
+   font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+   color: $primary;
+   text-align: center;
+   font-size: 80px;
+}
+
+// PRESTA
+.container {
+   background: #eee;
+   padding: 30px;
+   width: 900px;
+   margin: 50px auto;
+   font-size: 20px;
+   h2 {
+      text-transform: uppercase;
+      margin-bottom: 0;
+   }
+
+   .product {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+         width: 100px;
+      }
+      .info {
+         display: flex;
+         flex-direction: column;
+
+         span {
+            padding: 10px 0;
+         }
+      }
+      input {
+         height: 30px;
+         border-color: #333;
+         width: 70px;
+      }
+   }
+}
+
+// INTRO
+
+.priceContainer {
+   background: $second;
+   padding: 30px;
+   user-select: none;
+   font-size: 50px;
+   text-align: center;
+   color: white;
+   width: 1000px;
+   margin: 0 auto;
+
+   .quantity {
+      margin-bottom: 30px;
+   }
+
+   .btnContainer {
+      display: flex;
+      justify-content: space-between;
+      width: 1000px;
+      margin: 20px auto;
+
+      .btnCount {
+         border: none;
+         border-radius: 5px;
+         border: 3px solid $primary;
+         width: 200px;
+         font-size: 20px;
+         background: $primary;
+         color: white;
+         padding: 20px 50px;
+         cursor: pointer;
+         transition: 0.3s ease-in-out;
+      }
+      .btnCount:hover {
+         background: #fff;
+         color: $primary;
+      }
+   }
+}

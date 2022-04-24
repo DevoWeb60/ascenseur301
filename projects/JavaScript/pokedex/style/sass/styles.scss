@@ -1,0 +1,174 @@
+@import "./reset";
+
+// VARIABLES
+$Plante: #00d003;
+$Poison: #5f009e;
+$Feu: #ed3700;
+$Eau: #0030cc;
+$Electrik: #cfdd01;
+$Roche: #6f4f30;
+$Psy: #c700b0;
+$Fee: #f767e1;
+$Glace: #00e8e1;
+$Insecte: #007902;
+$Normal: #d2d2d2;
+$Vol: #00cda0;
+$Default: #000000;
+
+@mixin colorType($type, $selector) {
+   #{$selector} {
+      background-color: $type;
+      color: lighten($type, 70%);
+   }
+}
+
+body {
+   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+   background-color: #eee;
+}
+
+.container {
+   width: 1200px;
+   margin: 0 auto;
+
+   h1 img {
+      margin-bottom: 30px;
+      width: 25%;
+   }
+   ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      li {
+         margin: 20px 0;
+      }
+
+      li a {
+         text-decoration: none;
+         border: 1px solid #ccc;
+         padding: 7px 15px;
+         color: #777;
+         transition: 0.4s ease-in-out;
+         font-size: 20px;
+         border-radius: 5px;
+         background: #fff;
+         outline: none;
+         transition: 0.3s ease-in-out;
+
+         &:hover {
+            transform: scale(1.05);
+         }
+
+         &.active {
+            border: 3px solid #000;
+         }
+         @include colorType($Plante, "&[data-type='Plante' ]");
+         @include colorType($Feu, "&[data-type='Feu' ]");
+         @include colorType($Eau, "&[data-type='Eau' ]");
+         @include colorType($Electrik, "&[data-type='Electrik' ]");
+         @include colorType($Poison, "&[data-type='Poison' ]");
+         @include colorType($Roche, "&[data-type='Roche' ]");
+         @include colorType($Psy, "&[data-type='Psy' ]");
+         @include colorType($Fee, "&[data-type='Fee' ]");
+         @include colorType($Glace, "&[data-type='Glace' ]");
+         @include colorType($Insecte, "&[data-type='Insecte' ]");
+         @include colorType($Normal, "&[data-type='Normal' ]");
+         @include colorType($Vol, "&[data-type='Vol' ]");
+      }
+   }
+   #search {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px 5px 0 0;
+      font-size: 20px;
+      outline: none;
+      margin: 20px 0;
+      border-bottom: 5px solid transparent;
+      transition: border 0.4s ease-in-out;
+
+      &:focus {
+         border-color: $Eau;
+      }
+   }
+
+   .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+
+      .pokemon {
+         border-radius: 5px;
+         margin: 0 10px 10px 0;
+         background: #fff;
+         color: #333;
+         padding: 30px;
+         display: flex;
+         justify-content: space-between;
+         flex-direction: column;
+         align-items: center;
+         width: calc((1200px - 10px * 5) / 5);
+         max-width: 32%;
+         flex-grow: 2;
+         box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+         // filter: grayscale(1);
+         transition: filter 0.2s ease-in-out;
+
+         // &:hover {
+         //    filter: grayscale(0);
+         // }
+
+         img {
+            width: 100%;
+         }
+
+         h2 {
+            text-transform: uppercase;
+            color: #333;
+         }
+
+         div span {
+            background: $Default;
+            color: #333;
+            border-radius: 5px;
+            padding: 5px 15px;
+            color: #eee;
+            @include colorType($Plante, "&.Plante");
+            @include colorType($Feu, "&.Feu");
+            @include colorType($Eau, "&.Eau");
+            @include colorType($Electrik, "&.Electrik");
+            @include colorType($Poison, "&.Poison");
+            @include colorType($Roche, "&.Roche");
+            @include colorType($Psy, "&.Psy");
+            @include colorType($Fee, "&.Fee");
+            @include colorType($Glace, "&.Glace");
+            @include colorType($Insecte, "&.Insecte");
+            @include colorType($Normal, "&.Normal");
+            @include colorType($Vol, "&.Vol");
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1200px) {
+   .container {
+      width: 97%;
+
+      ul {
+         flex-wrap: wrap;
+      }
+   }
+}
+@media screen and (max-width: 900px) {
+   .container .content .pokemon {
+      width: 48%;
+   }
+}
+@media screen and (max-width: 534px) {
+   .container .content .pokemon {
+      width: 100%;
+      margin: 10px 0;
+   }
+}

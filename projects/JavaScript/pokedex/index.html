@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+      <link rel="stylesheet" href="style/css/styles.min.css" />
+      <title>Pokédex</title>
+   </head>
+   <body>
+      <div class="container">
+         <h1>
+            <img src="img/pokemon.png" alt="Pokemon" />
+         </h1>
+         <div class="filterContainer">
+            <ul>
+               <li><a href="#" data-type="all" class="active">Tous</a></li>
+               <li><a href="#" data-type="Plante">Plante</a></li>
+               <li><a href="#" data-type="Feu">Feu</a></li>
+               <li><a href="#" data-type="Eau">Eau</a></li>
+               <li><a href="#" data-type="Electrik">Electrik</a></li>
+               <li><a href="#" data-type="Poison">Poison</a></li>
+               <li><a href="#" data-type="Roche">Roche</a></li>
+               <li><a href="#" data-type="Psy">Psy</a></li>
+               <li><a href="#" data-type="Fee">Fée</a></li>
+               <li><a href="#" data-type="Glace">Glace</a></li>
+               <li><a href="#" data-type="Insecte">Insecte</a></li>
+               <li><a href="#" data-type="Normal">Normal</a></li>
+               <li><a href="#" data-type="Vol">Vol</a></li>
+            </ul>
+            <input
+               type="text"
+               name="search"
+               id="search"
+               placeholder='Rechercher ("type", pokemon)'
+            />
+         </div>
+         <div class="content"></div>
+      </div>
+      <script src="app.js" defer></script>
+   </body>
+</html>

@@ -1,0 +1,26 @@
+body {
+   background: #d15656;
+}
+a {
+   text-decoration: none;
+}
+h1 {
+   color: #fff;
+   font-family: Arial, Helvetica, sans-serif;
+}
+img,
+iframe {
+   border-radius: 5px;
+   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+   margin: 10px 0;
+   transition: 0.3s;
+}
+img:hover,
+iframe:hover {
+   transform: scale(1.03);
+}
+.container.home {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+}

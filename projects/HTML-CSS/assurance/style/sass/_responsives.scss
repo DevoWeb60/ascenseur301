@@ -1,0 +1,27 @@
+@media screen and (max-width: 980px) {
+   .container {
+      width: 100%;
+
+      .card {
+         min-width: calc(980px / 4.2);
+      }
+   }
+}
+@media screen and (max-width: 970px) {
+   .container-fluid {
+      padding: 20px;
+   }
+   .container {
+      width: 100%;
+
+      .card {
+         min-width: 49%;
+      }
+   }
+}
+@media screen and (max-width: 520px) {
+   .container .card {
+      min-width: 85%;
+      transition: 0.3s ease-in-out;
+   }
+}
