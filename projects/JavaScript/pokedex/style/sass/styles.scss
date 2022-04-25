@@ -5,22 +5,56 @@ $Plante: #00d003;
 $Poison: #5f009e;
 $Feu: #ed3700;
 $Eau: #0030cc;
-$Electrik: #cfdd01;
+$Electrik: #ddd201;
 $Roche: #6f4f30;
 $Psy: #c700b0;
 $Fee: #f767e1;
 $Glace: #00e8e1;
 $Insecte: #007902;
 $Normal: #d2d2d2;
-$Vol: #00cda0;
+$Sol: #9d804b;
+$Vol: #2473c3;
+$Tenebre: #353535;
+$Combat: #d64d03;
+$Acier: #848484;
+$Fantome: #2c005b;
+$Dragon: #00b0c7;
 $Default: #000000;
 
 @mixin colorType($type, $selector) {
-   #{$selector} {
+   .container ul li a[data-type="#{$selector}"] {
+      background-color: $type;
+      color: lighten($type, 70%);
+
+      &.active {
+         border-color: darken($type, 20%);
+      }
+   }
+
+   .container .content .pokemon div span.#{$selector} {
       background-color: $type;
       color: lighten($type, 70%);
    }
 }
+
+@include colorType($Plante, "Plante");
+@include colorType($Feu, "Feu");
+@include colorType($Eau, "Eau");
+@include colorType($Electrik, "Electrik");
+@include colorType($Poison, "Poison");
+@include colorType($Roche, "Roche");
+@include colorType($Psy, "Psy");
+@include colorType($Fee, "Fee");
+@include colorType($Glace, "Glace");
+@include colorType($Insecte, "Insecte");
+@include colorType($Normal, "Normal");
+@include colorType($Vol, "Vol");
+@include colorType($Sol, "Sol");
+@include colorType($Tenebre, "Tenebre");
+@include colorType($Combat, "Combat");
+@include colorType($Dragon, "Dragon");
+@include colorType($Acier, "Acier");
+@include colorType($Fantome, "Fantome");
 
 body {
    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -37,46 +71,42 @@ body {
    }
    ul {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
       align-items: center;
       list-style: none;
+      padding: 0;
+
       li {
-         margin: 20px 0;
-      }
+         flex-grow: 2;
+         width: calc(100% / 10);
+         margin: 5px;
+         a {
+            text-align: center;
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            border: 3px solid transparent;
+            padding: 7px 15px;
+            color: #777;
+            transition: 0.4s ease-in-out;
+            font-size: 20px;
+            border-radius: 5px;
+            background: #fff;
+            outline: none;
+            transition: 0.3s ease-in-out;
 
-      li a {
-         text-decoration: none;
-         border: 1px solid #ccc;
-         padding: 7px 15px;
-         color: #777;
-         transition: 0.4s ease-in-out;
-         font-size: 20px;
-         border-radius: 5px;
-         background: #fff;
-         outline: none;
-         transition: 0.3s ease-in-out;
+            &:hover {
+               transform: scale(1.05);
+            }
 
-         &:hover {
-            transform: scale(1.05);
+            &.active {
+               border: 3px solid #000;
+            }
          }
-
-         &.active {
-            border: 3px solid #000;
-         }
-         @include colorType($Plante, "&[data-type='Plante' ]");
-         @include colorType($Feu, "&[data-type='Feu' ]");
-         @include colorType($Eau, "&[data-type='Eau' ]");
-         @include colorType($Electrik, "&[data-type='Electrik' ]");
-         @include colorType($Poison, "&[data-type='Poison' ]");
-         @include colorType($Roche, "&[data-type='Roche' ]");
-         @include colorType($Psy, "&[data-type='Psy' ]");
-         @include colorType($Fee, "&[data-type='Fee' ]");
-         @include colorType($Glace, "&[data-type='Glace' ]");
-         @include colorType($Insecte, "&[data-type='Insecte' ]");
-         @include colorType($Normal, "&[data-type='Normal' ]");
-         @include colorType($Vol, "&[data-type='Vol' ]");
       }
    }
+
    #search {
       width: 100%;
       padding: 10px;
@@ -101,7 +131,7 @@ body {
 
       .pokemon {
          border-radius: 5px;
-         margin: 0 10px 10px 0;
+         margin: 5px;
          background: #fff;
          color: #333;
          padding: 30px;
@@ -129,24 +159,22 @@ body {
             color: #333;
          }
 
-         div span {
-            background: $Default;
-            color: #333;
-            border-radius: 5px;
-            padding: 5px 15px;
-            color: #eee;
-            @include colorType($Plante, "&.Plante");
-            @include colorType($Feu, "&.Feu");
-            @include colorType($Eau, "&.Eau");
-            @include colorType($Electrik, "&.Electrik");
-            @include colorType($Poison, "&.Poison");
-            @include colorType($Roche, "&.Roche");
-            @include colorType($Psy, "&.Psy");
-            @include colorType($Fee, "&.Fee");
-            @include colorType($Glace, "&.Glace");
-            @include colorType($Insecte, "&.Insecte");
-            @include colorType($Normal, "&.Normal");
-            @include colorType($Vol, "&.Vol");
+         div {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            span {
+               flex-grow: 2;
+               width: 48%;
+               text-align: center;
+               background: $Default;
+               margin: 0 2px;
+               color: #333;
+               border-radius: 5px;
+               padding: 5px 15px;
+               color: #eee;
+            }
          }
       }
    }
