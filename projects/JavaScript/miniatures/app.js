@@ -70,3 +70,16 @@ modalButton.addEventListener("click", () => {
 
 slideLeft.addEventListener("click", () => changeSlide("left"));
 slideRight.addEventListener("click", () => changeSlide());
+
+document.addEventListener("keydown", (e) => {
+   if (modal.classList.contains("active")) {
+      switch (e.key) {
+         case "ArrowRight":
+            changeSlide();
+            break;
+         case "ArrowLeft":
+            changeSlide("left");
+            break;
+      }
+   }
+});
