@@ -45,6 +45,8 @@
                 require_once 'views/templates/favories.php';
             }else if($_GET['page'] === "extensions"){
                 require_once 'views/templates/extensions.php';
+            }else if($_GET['page'] === "vscode"){
+                require_once 'views/templates/vscode.php';
             }else{
                 require_once 'views/templates/404.php';
             }

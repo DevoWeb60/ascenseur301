@@ -4,10 +4,12 @@ class Browser {
     public $allCategoriesOfFavories;
     public $allFavoriesByCategory;
     public $allExtensions; 
+    public $allVSCode;
     private $URL = "browsers";
 
     function __construct(){
         $this->allExtensions = $this->getAllExtensions();
+        $this->allVSCode = $this->getAllVSCode();
         $this->getAllCategoriesOfFavories();
     }
 
@@ -16,6 +18,14 @@ class Browser {
         return $this->getElements($extensionsContent);
     }
     
+    function getAllVSCode(){
+        $vscodeContent = file_get_contents($this->URL . "/vscode.txt", true);
+        return explode('|', $vscodeContent);
+    }
+
+    function parseVSCode($vscode){
+        return explode(";", $vscode);
+    }
 
     function getAllCategoriesOfFavories(){
         $favories = file_get_contents($this->URL."/listefav.txt", true);

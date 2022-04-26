@@ -24,5 +24,6 @@
     <div class="page-container">
         <a href="index.php?page=favoris" class="link favories">Favoris</a>
         <a href="index.php?page=extensions" class="link extensions">Extensions</a>
+        <a href="index.php?page=vscode" class="link vscode">VS Code</a>
     </div>
 </div>
