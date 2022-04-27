@@ -1,0 +1,42 @@
+@import "./reset";
+body,
+html {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#progressbar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   width: 0%;
+   height: 5px;
+   background: #2ac371;
+   transform-style: preserve-3d;
+
+   &::after {
+      content: "";
+      position: fixed;
+      width: 100vw;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #eee;
+      user-select: none;
+      color: transparent;
+      transform: translateZ(-1px);
+   }
+}
+
+header {
+   background: #c3edffb5;
+   padding: 30px;
+}
+.container-fluid {
+   height: 1000vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   font-size: 100px;
+   font-weight: bold;
+}
