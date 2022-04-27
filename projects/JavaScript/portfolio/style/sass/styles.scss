@@ -19,12 +19,19 @@ header {
    ul {
       display: flex;
       justify-content: space-evenly;
+      flex-wrap: wrap;
       align-items: center;
       padding-left: 0;
       list-style: none;
       width: 100%;
 
+      li {
+         margin: 10px;
+         flex-grow: 1;
+      }
+
       li a {
+         text-align: center;
          display: block;
          color: $text;
          border: 3px solid $text;
@@ -100,5 +107,22 @@ header {
             font-size: 30px;
          }
       }
+   }
+}
+
+@media screen and (max-width: 1200px) {
+   .container {
+      width: 100%;
+
+      .project {
+         max-width: 45%;
+      }
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .container .project {
+      width: 100%;
+      max-width: 95%;
    }
 }
