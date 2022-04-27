@@ -34,30 +34,24 @@
 <body class="<?= $bodyClass ?>">
     <?php require_once 'views/templates/sidebar.php'; ?>
     <div class="container">
-        <?php
-            if(empty($_GET)){
-                // ACCUEIL
-                require_once 'views/templates/home.php';
-            }else if(isset($_GET['categorie'])){
-                // CATEGORIES
-                require_once 'views/templates/categorie.php';
-            }else if(isset($_GET['search'])){
-                // RECHERCHE
-                require_once 'views/templates/search.php';
-            }else if(isset($_GET['page'])){
-                // BROWSERS
-                if($_GET['page'] === "favoris"){
-                    require_once 'views/templates/favories.php';
-                }else if($_GET['page'] === "extensions"){
-                    require_once 'views/templates/extensions.php';
-                }else{
-                    // ERROR
-                    require_once 'views/templates/404.php';
-                }
+        <?php if(empty($_GET)){
+            require_once 'views/templates/home.php'; 
+        }else if(isset($_GET['categorie'])){ 
+            require_once 'views/templates/categorie.php'; 
+         }else if(isset($_GET['search'])){ 
+            require_once 'views/templates/search.php';
+         }else if(isset($_GET['page'])){ 
+            if($_GET['page'] === "favoris"){
+                require_once 'views/templates/favories.php';
+            }else if($_GET['page'] === "extensions"){
+                require_once 'views/templates/extensions.php';
+            }else if($_GET['page'] === "vscode"){
+                require_once 'views/templates/vscode.php';
             }else{
                 // ERROR
                 require_once 'views/templates/404.php';
-            } ?>
+            } 
+        }?>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
     <script defer>
