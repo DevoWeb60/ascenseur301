@@ -151,9 +151,17 @@ const changeDisplayMode = (mode = "grid") => {
 
 gridMode.addEventListener("click", () => {
    changeDisplayMode();
+   if (!gridMode.classList.contains("active")) {
+      gridMode.classList.add("active");
+      listMode.classList.remove("active");
+   }
 });
 listMode.addEventListener("click", () => {
    changeDisplayMode("list");
+   if (!listMode.classList.contains("active")) {
+      listMode.classList.add("active");
+      gridMode.classList.remove("active");
+   }
 });
 
 // EXECUTE FIRST REQUEST ALL

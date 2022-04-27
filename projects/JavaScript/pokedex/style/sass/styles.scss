@@ -136,7 +136,8 @@ body {
          transition: 0.4s ease-in-out;
          margin-right: 10px;
 
-         &:hover {
+         &:hover,
+         &.active {
             transform: scale(1.05);
             background: $Eau;
             color: #fff;
