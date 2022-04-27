@@ -8,4 +8,7 @@ JavaScript Snippet Pack;Comme son nom l'indique, pack de snippet (Exemple: cl po
 Live Sass Compiler;Simplement pour faire du SASS sans se briser les burnes à l'installer sur le PC;https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass|
 Live Server;Lancer un serveur locale avec un Hot Reload, une sacré gain de temps;https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer|
 Live Share;Collaboration en équipe sur un même projet, même principe qu'un Google Doc mais dans VS Code;https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare|
-Material Icon Theme;Pour des icones de fichier et dossier tout mignon dans l'explorateur VS Code;https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
+Material Icon Theme;Pour des icones de fichier et dossier tout mignon dans l'explorateur VS Code;https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme|
+Color Highlight;Colorise la couleur choisi sur le nom de la couleur (rgba, rgb, hex, etc);https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight|
+W3C Web Validator;Vérification du code;https://marketplace.visualstudio.com/items?itemName=CelianRiboulet.webvalidator|
+MySQL;Connexion à une base de donnée et intéraction avec elle;https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-mysql-client2
