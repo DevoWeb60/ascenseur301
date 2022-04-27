@@ -1,0 +1,123 @@
+@import "./reset";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(
+        42deg,
+        #0a2043,
+        #442444,
+        #6e2445,
+        #971f45
+    );
+    min-height: 100vh;
+}
+
+.container {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.3);
+
+        h1 {
+            margin-right: 40px;
+        }
+
+        h2 {
+            color: white;
+        }
+    }
+
+    .main {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 900px;
+        margin: 30px auto;
+
+        .inputContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 80px;
+
+            #nameToDo {
+                font-size: 30px;
+                background: transparent;
+                text-align: center;
+                margin-bottom: 30px;
+
+                &::placeholder {
+                    color: #ddd;
+                }
+            }
+
+            .add {
+                width: 50%;
+                display: flex;
+                margin-bottom: 30px;
+            }
+            .controls {
+                width: 50%;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .todolist {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+
+            .todo {
+                display: flex;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.btnIcon {
+    padding: 10px;
+    background: #0a2043;
+    font-size: 20px;
+
+    &.deleteTodo,
+    &.toggleStatus {
+        padding: 10px 15px;
+    }
+
+    &.deleteTodo {
+        background: #fa6161;
+    }
+
+    &.toggleStatus {
+        background: #94d153;
+    }
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+select {
+    padding: 10px;
+    outline: none;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
