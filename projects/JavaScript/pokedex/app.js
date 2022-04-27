@@ -1,6 +1,10 @@
 const lis = document.querySelectorAll(".filterContainer ul li a");
 const content = document.querySelector(".content");
 const search = document.querySelector("#search");
+
+const gridMode = document.querySelector(".fas.fa-grip-horizontal");
+const listMode = document.querySelector(".fas.fa-list-ul");
+
 const URL_LOCALE = "https://ascenseur301.dev";
 const URL_DEPLOY = "http://thibaultberthelin.stagiaires.media-management.fr";
 const ALL_TYPE = "all";
@@ -135,6 +139,22 @@ const requestData = (type, action = BY_BUTTON, value) => {
          }
       });
 };
+
+const changeDisplayMode = (mode = "grid") => {
+   const pokemonContainer = document.querySelector(".content");
+   if (mode === "list") {
+      pokemonContainer.classList.add("list");
+   } else {
+      pokemonContainer.classList.remove("list");
+   }
+};
+
+gridMode.addEventListener("click", () => {
+   changeDisplayMode();
+});
+listMode.addEventListener("click", () => {
+   changeDisplayMode("list");
+});
 
 // EXECUTE FIRST REQUEST ALL
 requestData(ALL_TYPE);

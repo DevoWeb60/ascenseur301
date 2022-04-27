@@ -123,11 +123,72 @@ body {
       }
    }
 
+   .displayMode {
+      margin: 10px 0;
+
+      i {
+         padding: 10px;
+         background: #fff;
+         color: #333;
+         font-size: 30px;
+         border-radius: 5px;
+         cursor: pointer;
+         transition: 0.4s ease-in-out;
+         margin-right: 10px;
+
+         &:hover {
+            transform: scale(1.05);
+            background: $Eau;
+            color: #fff;
+         }
+      }
+   }
+
    .content {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       width: 100%;
+
+      &.list {
+         flex-direction: column;
+         animation: 0.3s ease-in-out normal animateDisplay;
+
+         .pokemon {
+            width: 100%;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            max-width: unset;
+            transition: 0.4s ease-in-out;
+
+            img {
+               width: 100px;
+               object-fit: cover;
+               margin-right: 50px;
+            }
+
+            h2 {
+               width: 65%;
+            }
+
+            div {
+               flex-direction: column;
+               align-items: flex-end;
+               justify-content: center;
+               align-self: flex-end;
+               width: 20%;
+               height: 100%;
+
+               span {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin-top: 10px;
+               }
+            }
+         }
+      }
 
       .pokemon {
          border-radius: 5px;
@@ -143,18 +204,14 @@ body {
          max-width: 32%;
          flex-grow: 2;
          box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-         // filter: grayscale(1);
-         transition: filter 0.2s ease-in-out;
-
-         // &:hover {
-         //    filter: grayscale(0);
-         // }
+         transition: 0.4s ease-in-out;
 
          img {
             width: 100%;
          }
 
          h2 {
+            width: 100%;
             text-transform: uppercase;
             color: #333;
          }
@@ -198,5 +255,17 @@ body {
    .container .content .pokemon {
       width: 100%;
       margin: 10px 0;
+   }
+}
+
+@keyframes animateDisplay {
+   0% {
+      opacity: 0;
+   }
+   75% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
    }
 }
