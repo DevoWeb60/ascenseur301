@@ -101,7 +101,7 @@ function create() {
       fill: "#000",
       fontFamily: "arial",
    });
-   healthText = this.add.text(600, 16, "Vie: 3", {
+   healthText = this.add.text(700, 16, "Vie: 3", {
       fontSize: "32px",
       fill: "#000",
       fontFamily: "arial",
