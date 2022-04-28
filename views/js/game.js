@@ -31,13 +31,18 @@ let gameOverText;
 
 var game = new Phaser.Game(config);
 
+const baseURL = window.location.origin;
+
 function preload() {
-   this.load.image("sky", "views/assets/game/backgrounds.png");
-   this.load.image("bomb", "views/assets/game/bomb.png");
-   this.load.image("ground", "views/assets/game/platform-dbz.png");
-   this.load.image("big-ground", "views/assets/game/big-platform-dbz.png");
-   this.load.image("db4", "views/assets/game/db4.png");
-   this.load.spritesheet("dude", "views/assets/game/piccolo.png", {
+   this.load.image("sky", baseURL + "/views/assets/game/backgrounds.png");
+   this.load.image("bomb", baseURL + "/views/assets/game/bomb.png");
+   this.load.image("ground", baseURL + "/views/assets/game/platform-dbz.png");
+   this.load.image(
+      "big-ground",
+      baseURL + "/views/assets/game/big-platform-dbz.png"
+   );
+   this.load.image("db4", baseURL + "/views/assets/game/db4.png");
+   this.load.spritesheet("dude", baseURL + "/views/assets/game/piccolo.png", {
       frameWidth: 38,
       frameHeight: 48,
    });
