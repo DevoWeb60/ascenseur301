@@ -51,6 +51,8 @@
                 // ERROR
                 require_once 'views/templates/404.php';
             } 
+        }else{ 
+            require_once 'views/templates/404.php';   
         }?>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
