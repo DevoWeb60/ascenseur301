@@ -17,7 +17,7 @@ var config = {
    },
 };
 
-let piccolo;
+let vegito;
 let platforms;
 let cursors;
 let balls;
@@ -28,6 +28,9 @@ let scoreText;
 let healthText;
 let health = 3;
 let gameOverText;
+let animationStarted = false;
+let runLeft = false;
+let runRight = false;
 
 var game = new Phaser.Game(config);
 
@@ -42,9 +45,9 @@ function preload() {
       baseURL + "/views/assets/game/big-platform-dbz.png"
    );
    this.load.image("db4", baseURL + "/views/assets/game/db4.png");
-   this.load.spritesheet("dude", baseURL + "/views/assets/game/piccolo.png", {
-      frameWidth: 38,
-      frameHeight: 48,
+   this.load.spritesheet("vegito", baseURL + "/views/assets/game/vegeto.png", {
+      frameWidth: 51,
+      frameHeight: 56,
    });
 }
 
@@ -61,26 +64,27 @@ function create() {
    platforms.create(50, 250, "ground");
    platforms.create(750, 220, "ground");
 
-   piccolo = this.physics.add.sprite(100, 450, "dude");
-   piccolo.setBounce(0.2);
-   piccolo.setCollideWorldBounds(true);
+   vegito = this.physics.add.sprite(100, 450, "vegito");
+   vegito.setBounce(0.2);
+   vegito.setCollideWorldBounds(true);
 
    this.anims.create({
-      key: "left",
-      frames: [{ key: "dude", frame: 1 }],
-      frameRate: 10,
+      key: "side",
+      frames: this.anims.generateFrameNumbers("vegito", { start: 10, end: 12 }),
+      frameRate: 7,
+      repeat: 0,
    });
    this.anims.create({
       key: "turn",
-      frames: [{ key: "dude", frame: 0 }],
+      frames: [{ key: "vegito", frame: 0 }],
       frameRate: 20,
    });
    this.anims.create({
-      key: "right",
-      frames: [{ key: "dude", frame: 2 }],
-      frameRate: 10,
+      key: "jump",
+      frames: this.anims.generateFrameNumbers("vegito", { start: 2, end: 3 }),
+      frameRate: 2,
+      repeat: 0,
    });
-
    cursors = this.input.keyboard.createCursorKeys();
 
    balls = this.physics.add.group({
@@ -96,10 +100,10 @@ function create() {
    });
 
    this.physics.add.collider(bombs, platforms);
-   this.physics.add.collider(piccolo, platforms);
+   this.physics.add.collider(vegito, platforms);
    this.physics.add.collider(balls, platforms);
-   this.physics.add.overlap(piccolo, balls, collectBalls, null, this);
-   this.physics.add.collider(piccolo, bombs, hitBomb, null, this);
+   this.physics.add.overlap(vegito, balls, collectBalls, null, this);
+   this.physics.add.collider(vegito, bombs, hitBomb, null, this);
 
    scoreText = this.add.text(16, 16, "Score: 0", {
       fontSize: "32px",
@@ -134,27 +138,42 @@ function update() {
    }
 
    if (cursors.left.isDown) {
-      piccolo.setVelocityX(-400);
-      piccolo.anims.play("left");
+      vegito.setVelocityX(-400);
+      vegito.flipX = false;
+      if (!runLeft) {
+         vegito.anims.play("side", true);
+         runLeft = true;
+      }
    } else if (cursors.right.isDown) {
-      piccolo.setVelocityX(400);
-      piccolo.anims.play("right");
+      vegito.setVelocityX(400);
+      vegito.flipX = true;
+      if (!runRight) {
+         vegito.anims.play("side", true);
+         runRight = true;
+      }
    } else {
-      piccolo.setVelocityX(0);
-      piccolo.anims.play("turn");
+      vegito.setVelocityX(0);
+      vegito.anims.play("turn");
    }
 
-   if (cursors.up.isDown && piccolo.body.touching.down) {
-      piccolo.setVelocityY(-450);
-      piccolo.anims.play("left", true);
+   if (cursors.right.isUp) {
+      runRight = false;
+   }
+   if (cursors.left.isUp) {
+      runLeft = false;
    }
 
-   if (cursors.down.isDown && !piccolo.body.touching.down) {
-      piccolo.setVelocityY(350);
+   if (cursors.up.isDown && vegito.body.touching.down) {
+      vegito.setVelocityY(-450);
+      vegito.anims.play("turn", true);
+   }
+
+   if (cursors.down.isDown && !vegito.body.touching.down) {
+      vegito.setVelocityY(350);
    }
 }
 
-function collectBalls(piccolo, star) {
+function collectBalls(vegito, star) {
    star.disableBody(true, true);
    score += 10;
    scoreText.setText("Score: " + score);
@@ -164,24 +183,24 @@ function collectBalls(piccolo, star) {
          child.enableBody(true, child.x, 0, true, true);
       });
       let x =
-         piccolo.x < 400
+         vegito.x < 400
             ? Phaser.Math.Between(400, 800)
             : Phaser.Math.Between(0, 400);
 
       let bomb = bombs.create(x, 16, "bomb");
       bomb.setBounce(1);
       bomb.setCollideWorldBounds(true);
-      bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
+      bomb.setVelocity(Phaser.Math.Between(50, 100), 20);
    }
 }
 
-function hitBomb(piccolo, bomb) {
+function hitBomb(vegito, bomb) {
    health = health - 1;
    healthText.setText("Vie : " + health);
    if (health === 0) {
       this.physics.pause();
-      piccolo.setTint(0xff0000);
-      piccolo.anims.play("turn");
+      vegito.setTint(0xff0000);
+      vegito.anims.play("turn");
       gameOver = true;
    }
 }

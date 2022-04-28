@@ -35,12 +35,16 @@
     <?php require_once 'views/templates/sidebar.php'; ?>
     <div class="container">
         <?php if(empty($_GET)){
+            // ACCUEIL
             require_once 'views/templates/home.php'; 
         }else if(isset($_GET['categorie'])){ 
+            // CATEGORIES
             require_once 'views/templates/categorie.php'; 
          }else if(isset($_GET['search'])){ 
+             // SEARCH
             require_once 'views/templates/search.php';
          }else if(isset($_GET['page'])){ 
+             // BROWSER
             if($_GET['page'] === "favoris"){
                 require_once 'views/templates/favories.php';
             }else if($_GET['page'] === "extensions"){
