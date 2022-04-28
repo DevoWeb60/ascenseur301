@@ -148,6 +148,10 @@ function update() {
       piccolo.setVelocityY(-450);
       piccolo.anims.play("left", true);
    }
+
+   if (cursors.down.isDown && !piccolo.body.touching.down) {
+      piccolo.setVelocityY(350);
+   }
 }
 
 function collectBalls(piccolo, star) {
