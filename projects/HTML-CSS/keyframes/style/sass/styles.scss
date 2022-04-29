@@ -1,0 +1,58 @@
+@import "./reset";
+
+body {
+   background: url("https://fr.web.img3.acsta.net/newsv7/20/01/06/14/40/5151509.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100%;
+}
+
+.animation {
+   position: relative;
+   position: absolute;
+   width: 50%;
+   height: 50%;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+
+   img {
+      position: absolute;
+      animation: 5s ease-in-out infinite running rotateDragonBall;
+   }
+}
+
+@keyframes rotateDragonBall {
+   0% {
+      transform: rotate(33deg);
+      bottom: 0%;
+      top: 90%;
+      right: 90%;
+      left: 90%;
+   }
+   25% {
+      right: 0%;
+      top: 0%;
+      left: 90%;
+      bottom: 90%;
+   }
+   50% {
+      top: 0%;
+      left: 0%;
+      right: 90%;
+      bottom: 90%;
+   }
+   75% {
+      left: 0%;
+      right: 90%;
+      top: 90%;
+      bottom: 0%;
+   }
+   100% {
+      transform: rotate((360deg * 5) + 33deg);
+      bottom: 0%;
+      right: 90%;
+      top: 90%;
+      left: 90%;
+   }
+}
