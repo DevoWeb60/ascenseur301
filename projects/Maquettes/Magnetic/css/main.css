@@ -561,12 +561,36 @@ header .rights a {
    }
 }
 @media screen and (max-width: 720px) {
-   header nav {
-      display: none;
-   }
    #menu_icon {
       display: block;
       margin: 0;
+   }
+
+   header nav {
+      position: absolute;
+      top: 100px;
+      right: 0;
+      z-index: 1000;
+      min-width: unset;
+      width: auto;
+   }
+   header nav ul {
+      display: none;
+   }
+   header nav ul.show_menu {
+      display: flex;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px 20px 20px 100px;
+   }
+   header nav ul.show_menu li {
+      width: 100%;
+   }
+   header nav ul.show_menu li a {
+      padding: 15px 0;
+      display: block;
+      width: 100%;
+      text-align: right;
    }
 }
 @media screen and (max-width: 550px) {
