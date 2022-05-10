@@ -1,134 +1,134 @@
 @keyframes rotateDragonBall {
-   0% {
-      transform: rotate(0deg);
-   }
-   100% {
-      transform: rotate(360deg);
-   }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes dragonBall {
-   0% {
-      transform: rotate(0deg) scale(1.3);
-   }
-   50% {
-      transform: rotate(200deg) scale(0.7);
-   }
-   100% {
-      transform: rotate(360deg) scale(1.3);
-   }
+    0% {
+        transform: rotate(0deg) scale(1.1);
+    }
+    50% {
+        transform: rotate(200deg) scale(0.5);
+    }
+    100% {
+        transform: rotate(360deg) scale(1.1);
+    }
 }
 
 @keyframes bandeau {
-   from {
-      transform: translateX(100%);
-   }
-   to {
-      transform: translate(-200%);
-   }
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translate(-200%);
+    }
 }
 
 @keyframes nuageMagique {
-   0% {
-      transform: translateY(30px);
-   }
-   50% {
-      transform: translateY(-10px);
-   }
-   100% {
-      transform: translateY(30px);
-   }
+    0% {
+        transform: translateY(30px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(30px);
+    }
 }
 
 @keyframes fondu {
-   from {
-      opacity: 0;
-      transform: translateX(100%);
-   }
-   to {
-      opacity: 1;
-      transform: translateX(0%);
-   }
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
 
 @keyframes circlePop-1 {
-   0% {
-      transform: translate(40px, 40px) scale(1);
-   }
-   90% {
-      transform: translate(40px, 40px) scale(1.1);
-   }
-   100% {
-      transform: translate(40px, 40px) scale(1);
-   }
+    0% {
+        transform: translate(40px, 40px) scale(1);
+    }
+    90% {
+        transform: translate(40px, 40px) scale(1.1);
+    }
+    100% {
+        transform: translate(40px, 40px) scale(1);
+    }
 }
 
 @keyframes circlePop-2 {
-   0% {
-      opacity: 1;
-      transform: translate(40px, 40px) scale(1);
-   }
-   100% {
-      opacity: 0;
-      transform: translate(40px, 40px) scale(2.5);
-   }
+    0% {
+        opacity: 1;
+        transform: translate(40px, 40px) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(40px, 40px) scale(2.5);
+    }
 }
 
 @keyframes fadeInLeft {
-   0% {
-      opacity: 0;
-      transform: translateX(-100%);
-   }
-   100% {
-      opacity: 1;
-      transform: translateX(0%);
-   }
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
 @keyframes fadeInScale {
-   0% {
-      opacity: 0;
-      transform: scale(0);
-   }
-   50% {
-      opacity: 0;
-      transform: scale(0);
-   }
-   90% {
-      opacity: 1;
-      transform: scale(1.1);
-   }
-   100% {
-      opacity: 1;
-      transform: scale(1);
-   }
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    90% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @keyframes disabledName {
-   0% {
-      width: 0%;
-   }
-   35% {
-      width: 0%;
-   }
-   65% {
-      width: 50%;
-   }
-   80% {
-      width: 50%;
-   }
-   100% {
-      width: 0%;
-   }
+    0% {
+        width: 0%;
+    }
+    35% {
+        width: 0%;
+    }
+    65% {
+        width: 50%;
+    }
+    80% {
+        width: 50%;
+    }
+    100% {
+        width: 0%;
+    }
 }
 
 @keyframes vegetaAnim {
-   0% {
-      background-position: 100%;
-   }
-   50% {
-      background-position: 0%;
-   }
-   100% {
-      background-position: 100%;
-   }
+    0% {
+        background-position: 100%;
+    }
+    50% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
 }
