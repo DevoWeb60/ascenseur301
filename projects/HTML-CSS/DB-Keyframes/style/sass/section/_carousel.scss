@@ -1,0 +1,22 @@
+.character-carousel{
+    position: absolute;
+    top:50%;
+    left:15vw;
+    width: 200px;
+    transform:translateY(-50%);
+    overflow: hidden;
+
+    .character{
+        display:flex;
+        align-items: center;
+        width:400%;
+        animation: 10s linear infinite carousel;
+
+        img{
+            width:200px;
+            object-fit: cover;
+            filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.8));
+        }
+
+    }
+}

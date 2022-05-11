@@ -1,0 +1,43 @@
+.bandeauContainer {
+    position: relative;
+    width: 40%;
+    margin: 20px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index:100;
+ 
+    .bandeau {
+       width: 100%;
+       position: relative;
+       background: rgba(0, 0, 0, 0.7);
+       padding: 10px 20px;
+       color: white;
+       font-size: 25px;
+       overflow-x: hidden;
+       white-space: nowrap;
+       border-radius: 10px;
+       backdrop-filter: blur(10px);
+ 
+       p {
+          animation: 20s linear infinite running bandeau;
+       }
+    }
+ 
+    .fa-quote-left,
+    .fa-quote-right {
+       position: absolute;
+       font-size: 30px;
+       color: white;
+    }
+    .fa-quote-left {
+       top: -15px;
+       left: 30px;
+       transform-origin: 50% bottom;
+       animation: 1.3s ease-in-out infinite shakedQuote;
+    }
+    .fa-quote-right {
+       bottom: -15px;
+       right: 30px;
+       transform-origin: 50% top;
+       animation: 1.3s ease-in-out infinite shakedQuote;
+    }
+ }

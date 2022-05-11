@@ -5,320 +5,43 @@ $red: #b90018;
 $yellow: #ede335;
 
 @font-face {
-    font-family: "Saiyan-Sans";
-    src: url("../../fonts/Saiyan-Sans.ttf") format("truetype");
+   font-family: "Saiyan-Sans";
+   src: url("../../fonts/Saiyan-Sans.ttf") format("truetype");
 }
 
 body {
-    background: url("../../img/shenron.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 25%;
-    height: 100%;
-    overflow: hidden;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
+   min-height: 100vh;
+   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-#vegita {
-    margin: 0;
-    span {
-        margin: 0;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        font-size: calc(135vh / 6);
-        transform: rotate(-90deg) translate(40%, -151%);
-        background: url("../../img/vegeta.jpg");
-        background-position: 100%;
-        background-size: 150%;
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        -webkit-text-stroke: 5px white;
-        animation: 15s linear infinite vegetaAnim;
-    }
+@import "./section/loader.scss";
+
+.container {
+   position: relative;
+   background: url("../../img/shenron.webp");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: 50% 25%;
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+   z-index:0;
+
+   @import "./section/title.scss";
+   @import "./section/vegeta.scss";
+   @import "./section/bandeau.scss";
+   @import "./section/circleDragonBall.scss";
+   @import "./section/nuageKararot.scss";
+   @import "./section/shareGames.scss";
+   @import "./section/btnContainer.scss";
+   @import "./section/carousel";
 }
+.freeza-animation{
+   position: relative;
+   height:70vh;
+   overflow: hidden;
 
-h1 {
-    display: flex;
-    justify-content: center;
-    font-family: "Saiyan-Sans";
-    text-align: center;
-    font-size: 120px;
-    color: $yellow;
-    -webkit-text-stroke: 3px #000;
-    margin: 5px;
-
-    span.ballZ {
-        color: $red;
-    }
-
-    span.ballOrange {
-        color: $orange;
-        -webkit-text-stroke: 3px $red;
-        font-size: 130px;
-    }
-
-    @for $i from 1 through 11 {
-        span.l#{$i} {
-            opacity: 0;
-            animation-name: fondu;
-            animation-duration: 300ms;
-            animation-delay: #{$i * 15}00ms;
-            animation-fill-mode: forwards;
-            animation-timing-function: ease-in-out;
-        }
-    }
+   @import "./section/freezer";
 }
-.bandeau {
-    position: relative;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px 20px;
-    color: white;
-    font-size: 25px;
-    width: 30%;
-    margin: 20px auto;
-    overflow-x: hidden;
-    white-space: nowrap;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-
-    p {
-        animation: 15s linear infinite running bandeau;
-    }
-}
-.circleDragonBall {
-    position: absolute;
-    width: 50%;
-    height: 20%;
-    top: 50%;
-    left: 50%;
-    transform-origin: 0 0;
-    animation: 15s linear infinite running rotateDragonBall;
-    z-index: -1;
-
-    img {
-        position: absolute;
-        top: 80%;
-        left: 18%;
-        animation: 15s linear infinite running dragonBall;
-        filter: drop-shadow(0px 0px 25px rgba(247, 146, 1, 0.8));
-    }
-}
-
-.btn-container {
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    transform: translate(-50%, -50%);
-
-    button {
-        position: relative;
-        background: rgba($orange, 0.2);
-        border: none;
-        color: $orange;
-        padding: 10px 15px;
-        width: 150px;
-        font-size: 30px;
-        letter-spacing: 1px;
-        margin: 0 10px;
-        cursor: pointer;
-        border-left: 5px solid $orange;
-        transform-style: preserve-3d;
-        transition: 0.3s ease-in-out;
-
-        &:hover {
-            color: white;
-            &:before {
-                width: 100%;
-            }
-        }
-
-        &::before {
-            position: absolute;
-            content: "";
-            width: 0%;
-            height: 100%;
-            left: -1px;
-            top: 0px;
-            background: $orange;
-            transform: translateZ(-1px);
-            transition: 0.2s ease-in-out;
-        }
-    }
-
-    .checkboxs {
-        margin: 20px;
-
-        div {
-            position: relative;
-            margin: 10px 0;
-
-            label {
-                color: white;
-                font-size: 20px;
-
-                span {
-                    color: $orange;
-                }
-            }
-
-            @import "./checkbox";
-        }
-    }
-
-    &::before,
-    &::after {
-        content: "";
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
-        padding: 10px;
-        border-radius: 50%;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-        transform: translate(40px, 40px);
-    }
-
-    &::before {
-        background: #91ddfe61;
-        animation: 1.6s ease-in-out infinite circlePop-2;
-    }
-
-    &::after {
-        background: #fff;
-        background-image: url("../../img/capsule.png");
-        background-size: 80%;
-        background-position: center;
-        background-repeat: no-repeat;
-        animation: 1.6s ease-in-out infinite circlePop-1;
-    }
-}
-
-#nuage {
-    position: absolute;
-    top: 90px;
-    right: 90px;
-    width: 200px;
-    object-fit: cover;
-    filter: drop-shadow(20px 20px 5px rgba(0, 0, 0, 0.3));
-    animation: 2s ease-in-out infinite nuageMagique;
-
-    img {
-        width: 100%;
-        display: block;
-        margin: 0 auto;
-    }
-
-    h3.name-1 {
-        position: relative;
-
-        &::after {
-            position: absolute;
-            top: 50%;
-            left: 50px;
-            content: "";
-            width: 0%;
-            height: 3px;
-            background: $red;
-            animation: 8s ease-in-out 500ms infinite disabledName;
-        }
-    }
-    h3 {
-        font-size: 20px;
-        padding: 10px 0;
-        background: #eee;
-        text-align: center;
-        border-radius: 10px;
-        transform: translateX(-15%);
-    }
-}
-
-.modalContainer {
-    display: flex;
-    position: fixed;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(7px);
-    pointer-events: none;
-    transition: 0.4s ease-in-out;
-
-    &.active {
-        animation: 0.8s ease-in-out 200ms forwards fadeInLeft;
-        pointer-events: all;
-    }
-
-    &.active .modal {
-        animation: 1s ease-in-out 0.6s forwards fadeInScale;
-    }
-
-    .modal {
-        width: 70%;
-        position: relative;
-        background: rgba(0, 0, 0, 0.7);
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-        opacity: 0;
-        transition: 0.4s ease-in-out;
-
-        .modal-close {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            color: $orange;
-            font-size: 30px;
-            transition: 0.3s ease-in-out;
-            cursor: pointer;
-
-            &:hover {
-                transform: scale(1.2);
-            }
-        }
-        h2 {
-            font-size: 50px;
-            color: $orange;
-        }
-
-        .content {
-            display: flex;
-            justify-content: space-between;
-            color: white;
-            font-size: 30px;
-
-            p {
-                width: 50%;
-                line-height: 150%;
-
-                span {
-                    color: $orange;
-                }
-            }
-            img {
-                width: 300px;
-            }
-        }
-
-        #tour-karine {
-            position: absolute;
-            top: 0px;
-            left: 50%;
-            transform: translate(-50%, -100%);
-            width: 200px;
-        }
-    }
-}
+@import "./section/modal.scss";
 
 @import "./animations";

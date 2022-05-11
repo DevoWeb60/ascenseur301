@@ -1,0 +1,95 @@
+.btn-container {
+   padding: 20px;
+   background: rgba(0, 0, 0, 0.7);
+   border-radius: 10px;
+   position: absolute;
+   top: 60%;
+   left: 50%;
+   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+   backdrop-filter: blur(10px);
+   transform: translate(-50%, -50%);
+   z-index:100;
+
+   button {
+      position: relative;
+      background: rgba($orange, 0.2);
+      border: none;
+      color: $orange;
+      padding: 10px 15px;
+      width: 150px;
+      font-size: 30px;
+      letter-spacing: 1px;
+      margin: 0 10px;
+      cursor: pointer;
+      border-left: 5px solid $orange;
+      transform-style: preserve-3d;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+         color: white;
+         &:before {
+            width: 100%;
+         }
+      }
+
+      &::before {
+         position: absolute;
+         content: "";
+         width: 0%;
+         height: 100%;
+         left: -1px;
+         top: 0px;
+         background: $orange;
+         transform: translateZ(-1px);
+         transition: 0.2s ease-in-out;
+      }
+   }
+
+   .checkboxs {
+      margin: 20px;
+
+      div {
+         position: relative;
+         margin: 10px 0;
+
+         label {
+            color: white;
+            font-size: 20px;
+
+            span {
+               color: $orange;
+            }
+         }
+
+         @import "../checkbox";
+      }
+   }
+
+   &::before,
+   &::after {
+      content: "";
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      padding: 10px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      transform: translate(40px, 40px);
+   }
+
+   &::before {
+      background: #91ddfe61;
+      animation: 1.6s ease-in-out infinite circlePop-2;
+   }
+
+   &::after {
+      background: #fff;
+      background-image: url("../../img/capsule.png");
+      background-size: 80%;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: 1.6s ease-in-out infinite circlePop-1;
+   }
+}

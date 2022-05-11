@@ -1,0 +1,52 @@
+.shareGames {
+   position: absolute;
+   bottom: 30px;
+   right: 30px;
+   width: 200px;
+   padding: 10px;
+   color: $orange;
+   border: 3px solid $orange;
+   background: rgba(255, 255, 255, 0.2);
+   border-radius: 5px;
+   white-space: nowrap;
+   overflow: hidden;
+   z-index:100;
+
+   &:hover .subContainer {
+      transform: translateX(0%);
+   }
+
+   .subContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 200%;
+      transform: translateX(-50%);
+      transition: 0.4s ease-in-out;
+
+      .links {
+         display: flex;
+         width: 50%;
+         a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+
+            img {
+               transition: 0.4s ease-in-out;
+            }
+
+            &:hover img {
+               transform: translate(-5px, -5px);
+               filter: drop-shadow(3px 3px 1px rgba(255, 255, 255, 0.3));
+            }
+         }
+      }
+
+      h3 {
+         width: 50%;
+         text-align: center;
+      }
+   }
+}

@@ -1,0 +1,18 @@
+#vegita {
+    margin: 0;
+    span {
+       margin: 0;
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       font-size: calc(135vh / 6);
+       transform: rotate(-90deg) translate(40%, -151%);
+       background: url("../../img/vegeta.jpg");
+       background-position: 100%;
+       background-size: 150%;
+       -webkit-text-fill-color: transparent;
+       -webkit-background-clip: text;
+       -webkit-text-stroke: 5px white;
+       animation: 15s linear infinite vegetaAnim;
+    }
+ }

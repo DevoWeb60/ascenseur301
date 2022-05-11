@@ -1,0 +1,18 @@
+.circleDragonBall {
+   position: absolute;
+   width: 50%;
+   height: 20%;
+   top: 50%;
+   left: 50%;
+   transform-origin: 0 0;
+   animation: 10s linear infinite running rotate;
+   z-index: 5;
+
+   img {
+      position: absolute;
+      top: 80%;
+      left: 18%;
+      animation: 10s linear infinite running dragonBall;
+      filter: drop-shadow(0px 0px 25px rgba(247, 146, 1, 0.8));
+   }
+}

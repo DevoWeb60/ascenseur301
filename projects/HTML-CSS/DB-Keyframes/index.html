@@ -5,58 +5,103 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../../views/assets/favicon.png" type="image/x-icon">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <script src="https://kit.fontawesome.com/8ce2cffc6a.js" crossorigin="anonymous" ></script>
       <link rel="stylesheet" href="style/css/styles.min.css" />
       <title>Keyframes</title>
    </head>
    <body>
-      <h1>
-         <span class="l1">D</span>
-         <span class="l2">r</span>
-         <span class="l3">a</span>
-         <span class="l4">g</span>
-         <span class="l5 ballOrange">o</span>
-         <span class="l6">n</span>
-         <span class="ballZ l7"">B</span>
-          <span class="ballZ l8"">a</span>
-          <span class="ballZ l9"">l</span>
-          <span class="ballZ l10"">l</span>
-          <span class="ballZ l11"">Z</span>
-      </h1>
-      <h2 id="vegita"><span>VEGETA</span></h2>
-      <!-- CITATION  -->
-      <div class="bandeauContainer">
-         <div class="bandeau">
-            <p>
-               Tu as peut-être envahit mon esprit et mon corps mais un Saiyen garde
-               toujours sa fierté
-            </p>
+      <!-- !LOADER -->
+      <div class="overlay">
+         <div class="loading"></div>
+      </div>
+
+      <div class="container">
+
+         <!-- !TITLE  -->
+         <h1>
+            <span class="l1">D</span>
+            <span class="l2">r</span>
+            <span class="l3">a</span>
+            <span class="l4">g</span>
+            <span class="l5 ballOrange">o</span>
+            <span class="l6">n</span>
+            <span class="ballZ l7"">B</span>
+             <span class="ballZ l8"">a</span>
+             <span class="ballZ l9"">l</span>
+             <span class="ballZ l10"">l</span>
+             <span class="ballZ l11"">Z</span>
+         </h1>
+
+         <!-- !VEGETA -->
+         <h2 id="vegita"><span>VEGETA</span></h2>
+
+         <!-- !CITATION  -->
+         <div class="bandeauContainer">
+            <div class="bandeau">
+               <p>
+                  Tu as peut-être envahit mon esprit et mon corps mais un Saiyen garde
+                  toujours sa fierté
+               </p>
+            </div>
+            <i class="fas fa-quote-left"></i>
+            <i class="fas fa-quote-right"></i>
          </div>
-      </div>
-      <!-- NUAGE  -->
-      <div id="nuage">
-         <img src="./img/nuage.png" alt="Goku nuage magique" />
-         <h3 class="name-1">Kakarot</h3>
-         <h3 class="name-2">Son Goku</h3>
-      </div>
-      <!-- CIRCLE DRAGON BALL  -->
-      <div class="circleDragonBall">
-         <img
-            src="https://static.wikia.nocookie.net/dbz-dokkanbattle/images/0/00/Dragon_Ball_5.png"
-            alt="dragon ball"
-         />
-      </div>
-      <!-- CONTROLS  -->
-      <div class="btn-container">
-         <div>
-            <button id="play">Animer</button>
-            <button id="pause">Pause</button>
+
+         <!-- !NUAGE  -->
+         <div id="nuage">
+            <img src="./img/nuage.png" alt="Goku nuage magique" />
+            <h3 class="name-1">Kakarot</h3>
+            <h3 class="name-2">Son Goku</h3>
          </div>
-         <div class="checkboxs">
+
+         <!-- !CIRCLE DRAGON BALL  -->
+         <div class="circleDragonBall">
+            <img
+               src="https://static.wikia.nocookie.net/dbz-dokkanbattle/images/0/00/Dragon_Ball_5.png"
+               alt="dragon ball"
+            />
+         </div>
+
+         <div class="character-carousel">
+            <div class="character">
+               <img src="./img/baddack.png" alt="baddack">
+               <img src="./img/piccolo.png" alt="piccolo">
+               <img src="./img/gohan.png" alt="gohan">
+               <img src="./img/satan.png" alt="satan">
+            </div>
+         </div>
+
+         <!-- !CONTROLS  -->
+         <div class="btn-container">
+            <div>
+               <button id="play">Animer</button>
+               <button id="pause">Pause</button>
+            </div>
+            <div class="checkboxs">
+            </div>
+         </div>
+   
+         <!-- !SHARES GAMES  -->
+         <div class="shareGames">
+            <div class="subContainer">
+               <div class="links">
+                  <a href="../../JavaScript/dragon_boule" target="_blank" title="Dragon Boule"""><img src="../../../views/assets/favicon.png" alt="Dragon Boule"></a>
+                  <a href="https://dragonballrebirth.fr" target="_blank" title="Dragon Ball Rebirth"""><img src="https://www.dragonballrebirth.fr/css/images/favicon.png" alt="DBR"></a>
+               </div>
+               <h3>Jeux&nbsp;DBZ</h3>
+            </div>
          </div>
       </div>
 
-      <!-- MODAL  -->
+      <!-- !FREEZA ANIMATION  -->
+      <div class="freeza-animation">
+         <img src="./img/back-sky-anim.png" alt="Background" id="sky">
+         <img src="./img/freezer.png" alt="Freeza" id="freeza""">
+         <img src="./img/back-animation.png" alt="Rocks" id="rocks">
+      </div>
+
+      <!-- !MODAL  -->
       <div class="modalContainer active">
          <div class="modal">
             <div class="modal-close">
@@ -65,11 +110,13 @@
             <img src="./img/tour-karine.png" alt="Tour karine" id="tour-karine">
             <h2>Bienvenue sur ce site inutile !</h2>
             <div class="content">
-               <p class="text">Tu peux visualiser les animations et les contrôler en selectionnant les checkboxs et puis appliquer l'action : <br> <span>Animer</span> ou <span>Pause</span>.</p>
+               <p class="text">Tu peux visualiser les animations et les contrôler en selectionnant les checkboxs et puis appliquer l'action&nbsp;: <br> <span>Animer</span> ou <span>Pause</span>.</p>
                <img src="./img/modal-pic.png" alt="Goku">
             </div>
          </div>
       </div>
-      <script src="app.js" defer></script>
+
+
+      <script src="app.js" type="module" defer></script>
    </body>
 </html>

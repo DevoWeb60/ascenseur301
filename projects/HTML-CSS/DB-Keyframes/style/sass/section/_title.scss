@@ -1,0 +1,31 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: "Saiyan-Sans";
+    text-align: center;
+    font-size: 120px;
+    color: $yellow;
+    -webkit-text-stroke: 3px #000;
+    margin: 5px;
+ 
+    span.ballZ {
+       color: $red;
+    }
+ 
+    span.ballOrange {
+       color: $orange;
+       -webkit-text-stroke: 3px $red;
+       font-size: 130px;
+    }
+ 
+    @for $i from 1 through 11 {
+       span.l#{$i} {
+          opacity: 0;
+          animation-name: fondu;
+          animation-duration: 300ms;
+          animation-delay: #{$i + 30 *2.2}00ms;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-in-out;
+       }
+    }
+ }
