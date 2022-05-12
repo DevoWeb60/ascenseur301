@@ -1,22 +1,20 @@
-.character-carousel{
-    position: absolute;
-    top:50%;
-    left:15vw;
-    width: 200px;
-    transform:translateY(-50%);
-    overflow: hidden;
+.character-carousel {
+   position: absolute;
+   top: 50%;
+   left: 15vw;
+   width: 200px;
+   transform: translateY(-50%);
+   overflow: hidden;
 
-    .character{
-        display:flex;
-        align-items: center;
-        width:400%;
-        animation: 10s linear infinite carousel;
+   .character {
+      display: flex;
+      align-items: center;
 
-        img{
-            width:200px;
-            object-fit: cover;
-            filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.8));
-        }
-
-    }
+      img {
+         width: 200px;
+         object-fit: cover;
+      }
+   }
+   $NbImages: 4;
+   @include carouselMixin($NbImages);
 }

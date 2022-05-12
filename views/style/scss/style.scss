@@ -24,6 +24,8 @@ $wordpress: #4769ef;
 $prestashop: #f55757;
 $flexbox: #57a9f5;
 $maquettes: #fa5246;
+$sass: #c76494;
+$keyframes: #00796C;
 
 $sidebar: 23%;
 
@@ -41,6 +43,8 @@ $sidebar: 23%;
 @include dynamicLanguageColor($favories, "favoris");
 @include dynamicLanguageColor($extensions, "extensions");
 @include dynamicLanguageColor($vscode, "vscode");
+@include dynamicLanguageColor($sass, "sass");
+@include dynamicLanguageColor($keyframes, "keyframes");
 
 canvas {
    width: 100%;

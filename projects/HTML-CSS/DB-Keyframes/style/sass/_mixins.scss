@@ -1,0 +1,70 @@
+@mixin carouselMixin($NbImages) {
+   $step: calc(96 / $NbImages);
+   $stepTranslate: calc(100 / $NbImages);
+   $animationDuration: calc($NbImages * 2);
+   $lastImage: 0;
+
+   .character {
+      width: percentage($NbImages);
+      animation: #{$animationDuration}s linear infinite carousel;
+   }
+
+   @keyframes carousel {
+      0% {
+         opacity: 0;
+         transform: translateX(0%);
+      }
+      2% {
+         opacity: 1;
+         transform: translateX(0%);
+      }
+      @for $i from 1 to $NbImages {
+         $currentStep: calc($i * $step);
+         $currentStepTranslate: calc($i * $stepTranslate);
+         $previousStepTranslate: calc(($i - 1) * $stepTranslate);
+         $visiblePause: calc($currentStep - 2);
+         $visibleCurrentStep: calc($currentStep + 1);
+         $invisible: calc($currentStep - 1);
+
+         #{percentage(calc(($visiblePause + $i) / 100))} {
+            opacity: 1;
+            transform: translateX(
+               percentage(calc(($previousStepTranslate) / 100 * -1))
+            );
+         }
+         #{percentage(calc(($invisible + $i) / 100))} {
+            opacity: 0;
+            transform: translateX(
+               percentage(calc(($previousStepTranslate) / 100 * -1))
+            );
+         }
+         #{percentage(calc(($currentStep + $i) / 100))} {
+            opacity: 0;
+            transform: translateX(
+               percentage(calc($currentStepTranslate / 100 * -1))
+            );
+         }
+         #{percentage(calc(($visibleCurrentStep + $i) / 100))} {
+            opacity: 1;
+            transform: translateX(
+               (percentage(calc($currentStepTranslate / 100 * -1)))
+            );
+         }
+
+         $lastImage: $currentStepTranslate;
+      }
+
+      98% {
+         opacity: 1;
+         transform: translateX(percentage(calc($lastImage / 100 * -1)));
+      }
+      99% {
+         opacity: 0;
+         transform: translateX(percentage(calc($lastImage / 100 * -1)));
+      }
+      100% {
+         opacity: 0;
+         transform: translateX(0%);
+      }
+   }
+}
