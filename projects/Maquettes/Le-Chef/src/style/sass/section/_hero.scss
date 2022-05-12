@@ -1,0 +1,23 @@
+#hero{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:calc(100vh - 76px);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/projects/Maquettes/Le-Chef/src/img/slider1.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:$white;
+    
+    div{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:100%;
+        text-align: center;
+    }
+}

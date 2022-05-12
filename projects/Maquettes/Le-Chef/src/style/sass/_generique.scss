@@ -1,0 +1,91 @@
+// !TEXT
+
+h2 {
+   vertical-align: top;
+   font-size: 36px;
+   font-weight: 500;
+}
+
+.caps {
+   vertical-align: top;
+   font-size: 36px;
+   font-weight: 500;
+   text-transform: uppercase;
+}
+
+.bold {
+   vertical-align: top;
+   font-size: 24px;
+   font-weight: 700;
+}
+
+p {
+   vertical-align: top;
+   font-size: 18px;
+   font-weight: 500;
+
+   &.caps{
+      font-size:18px
+   }
+}
+
+.small-caps {
+   font-size: 16px;
+   font-weight: 400;
+   text-transform: uppercase;
+}
+
+// !RESET
+ul {
+   list-style: none;
+   padding-left: 0;
+}
+
+// !STYLE
+.container {
+   width: 1200px;
+   margin: 0 auto;
+}
+
+.btn {
+   background: $pink;
+   color: $white;
+   border-radius: 5px;
+   text-transform: uppercase;
+   padding: 10px 15px;
+   text-align: center !important;
+   transition: 0.4s ease-in-out;
+
+   &:hover {
+      background: darken($pink, 10);
+      color: $white;
+   }
+}
+
+a {
+   color: $black;
+   text-decoration: none;
+   transition: 0.4s ease-in-out;
+
+   &:hover {
+      color: $pink;
+   }
+}
+
+// !COLORS
+.pink {
+   color: $pink;
+}
+.bg-white {
+   padding: 80px 0;
+   background: $white;
+}
+
+// !MIXINS AND KEYFRAMES
+
+@mixin flexColumn {
+   display: flex;
+   justify-items: center;
+   align-items: center;
+   flex-direction: column;
+}

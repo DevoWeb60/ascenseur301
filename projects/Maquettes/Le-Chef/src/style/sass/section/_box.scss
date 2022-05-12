@@ -1,0 +1,26 @@
+#box {
+   @include flexColumn;
+   text-align: center;
+
+   h2.caps {
+       width: 50%;
+       margin: 0 auto;
+       margin-bottom: 50px;
+   }
+
+   .cards{
+      display:flex;
+      justify-content:space-around;
+      align-items: center;
+
+      .card{
+          width:32%;
+
+          img{
+              width:122px;
+          }
+          h3{
+          }
+      }
+   }
+}

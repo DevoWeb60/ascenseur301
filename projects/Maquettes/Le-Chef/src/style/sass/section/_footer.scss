@@ -1,0 +1,22 @@
+footer{
+    &.bg-white{
+        padding:5px;
+    }
+
+    ul{
+        width:100%;
+        display:flex;
+        justify-content: space-between;
+
+        li{
+            display:flex;
+            align-items: center;
+
+            i{
+                color:$pink;
+                font-size:25px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
