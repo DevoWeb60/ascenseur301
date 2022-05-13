@@ -1,0 +1,40 @@
+@import "./reset";
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+
+   .container {
+      // border: 1px solid #000;
+      background: url("../../img/sprite_luffy.png");
+      background-size: 1960px;
+      transform: scale(2.5);
+      background-position: -0px calc(18.05 * 100px);
+      width: 100px;
+      height: 100px;
+
+      &.luffyPunch{
+          animation: 1.7s steps(1, end) 1 luffyPunch;
+        }
+      &.highKick{
+         animation: 1.2s steps(1, end) 1 highKick;
+      }
+      
+      &.gomuGomu,
+      &:hover{
+         background: url("../../img/spritesheet.png");
+         background-repeat: no-repeat;
+         width:110px;
+         height:55px;
+         animation: 1.2s steps(1, end) 1 gomuGomu;
+         transform:scale(3.5);
+      }
+   }
+}
+
+@import "./animations/luffyPunch";
+@import "./animations/highKick";
+@import "./animations/gomuGomu";
+

@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,900&family=Rozha+One&display=swap");
+@import "./reset";
+@import "./variables";
+
+// !LAYOUT
+@import "./layout/header";
+@import "./layout/footer";
+
+// !PAGES
+@import "./pages/home";
+
+// !GENERAL
+body {
+   background: $lightGrey;
+   font-family: "Montserrat", sans-serif;
+   font-size: 20px;
+   color: #000;
+}
+ul {
+   list-style: none;
+   padding-left: 0;
+}
+a {
+   text-decoration: none;
+}
+
+// !COMPONENT
+.btn,
+.btn-red {
+   padding: 7px 13px;
+   border: 2px solid $white;
+   color: $white;
+   font-size: $fs-p;
+   font-weight: bold;
+   border-radius: $borderRadius;
+   transition: $transition;
+
+   &:hover {
+      background: $white;
+      color: $red;
+   }
+}
+.btn-red {
+   border-color: $red;
+   color: $red;
+
+   &:hover {
+      background: $red;
+      color: $white;
+   }
+}
+.link {
+   color: $white;
+   font-weight: bold;
+   font-size: $fs-p;
+   transition: $transition;
+
+   &:hover {
+      opacity: 0.6;
+   }
+}
+.container {
+   width: 1000px;
+   padding: 100px 0;
+   margin: 0 auto;
+}
+.flex-section {
+   display: flex;
+
+   .content,
+   img {
+      width: 50%;
+   }
+
+   img {
+      display: block;
+   }
+
+   &.invert {
+      flex-direction: row-reverse;
+   }
+}
+
+// !TEXT
+h2 {
+   font-family: $rozhaOne;
+   font-size: $fs-h2;
+   font-weight: 400;
+   text-transform: uppercase;
+}
+
+h2.lower {
+   font-family: $rozhaOne;
+   font-size: $fs-h2;
+   font-weight: 400;
+}
+
+p {
+   font-family: $montSerrat;
+   font-size: $fs-p;
+   font-weight: 400;
+   line-height: 150%;
+}

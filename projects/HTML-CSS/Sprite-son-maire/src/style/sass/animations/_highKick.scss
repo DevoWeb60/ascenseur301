@@ -1,0 +1,47 @@
+$stepHighKick: calc(100 / 11);
+@keyframes highKick {
+   0% {
+      background-position: -15px calc(-4.1 * 100px);
+      width: 100px;
+   }
+   #{percentage($stepHighKick / 100)} {
+      background-position: -100px calc(-4 * 100px);
+      width: 100px;
+   }
+   #{percentage($stepHighKick * 3 / 100)} {
+      background-position: -190px calc(-4 * 100px);
+      width: 100px;
+   }
+   #{percentage($stepHighKick * 4 / 100)} {
+      background-position: -290px calc(-4 * 100px);
+      width: 100px;
+   }
+   #{percentage($stepHighKick * 5 / 100)} {
+      background-position: -405px calc(-4 * 100px);
+      width: 100px;
+   }
+   #{percentage($stepHighKick * 6 / 100)} {
+      background-position: -522px calc(-4 * 100px);
+      width: 100px;
+   }
+   #{percentage($stepHighKick * 6 / 100)} {
+      background-position: -640px calc(-4 * 100px);
+      width: 100px;
+   }
+   #{percentage($stepHighKick * 7 / 100)} {
+      background-position: -750px calc(-4 * 100px);
+      width: 100px;
+   }
+   #{percentage($stepHighKick * 8 / 100)} {
+      background-position: -835px calc(-4 * 100px);
+      width: 100px;
+   }
+   #{percentage($stepHighKick * 9 / 100)} {
+      background-position: -935px calc(-4.05 * 100px);
+      width: 100px;
+   }
+   #{percentage($stepHighKick * 10 / 100)} {
+      background-position: -1035px calc(-4 * 100px);
+      width: 100px;
+   }
+}

@@ -1,0 +1,120 @@
+$stepGomuGomu: calc(100 / 19);
+@keyframes gomuGomu{
+    0% {
+        background-position: -15px calc(-4.1 * 100px);
+        width: 100px;
+     }
+     #{percentage($stepGomuGomu / 100)} {
+         width: 94px;
+         height: 53px;
+         background-position: -5px -5px;
+     }
+     
+     #{percentage($stepGomuGomu * 3 / 100)} {
+         width: 94px;
+         height: 53px;
+         background-position: -109px -5px;
+     }
+     
+     #{percentage($stepGomuGomu * 4 / 100)} {
+         width: 45px;
+         height: 56px;
+         background-position: -213px -5px;
+     }
+     
+     #{percentage($stepGomuGomu * 5 / 100)}  {
+         width: 45px;
+         height: 56px;
+         background-position: -268px -5px;
+     }
+     
+     #{percentage($stepGomuGomu * 6 / 100)}  {
+         width: 43px;
+         height: 56px;
+         background-position: -5px -71px;
+     }
+     
+     #{percentage($stepGomuGomu * 7 / 100)}  {
+         width: 63px;
+         height: 56px;
+         background-position: -58px -71px;
+     }
+     
+     #{percentage($stepGomuGomu * 8 / 100)}  {
+         width: 57px;
+         height: 56px;
+         background-position: -131px -71px;
+     }
+     
+     #{percentage($stepGomuGomu * 9 / 100)}  {
+         width: 65px;
+         height: 56px;
+         background-position: -198px -71px;
+     }
+     
+     #{percentage($stepGomuGomu * 10 / 100)}  {
+         width: 89px;
+         height: 56px;
+         background-position: -5px -137px;
+     }
+     
+     #{percentage($stepGomuGomu * 11 / 100)}  {
+         width: 97px;
+         height: 56px;
+         background-position: -104px -137px;
+     }
+     
+     #{percentage($stepGomuGomu * 12 / 100)}  {
+         width: 113px;
+         height: 56px;
+         background-position: -211px -137px;
+     }
+     
+     #{percentage($stepGomuGomu * 13 / 100)}  {
+         width: 116px;
+         height: 56px;
+         background-position: -5px -203px;
+     }
+     
+     #{percentage($stepGomuGomu * 14 / 100)}  {
+         width: 122px;
+         height: 53px;
+         background-position: -131px -203px;
+     }
+     
+     #{percentage($stepGomuGomu * 15 / 100)}  {
+         width: 136px;
+         height: 53px;
+         background-position: -131px -266px;
+     }
+     
+     #{percentage($stepGomuGomu * 16 / 100)}  {
+         width: 141px;
+         height: 53px;
+         background-position: -323px -5px;
+     }
+     
+     #{percentage($stepGomuGomu * 17 / 100)}  {
+         width: 94px;
+         height: 53px;
+         background-position: -323px -68px;
+     }
+     
+     #{percentage($stepGomuGomu * 18 / 100)}  {
+         width: 59px;
+         height: 53px;
+         background-position: -334px -131px;
+     }
+     
+     #{percentage($stepGomuGomu * 19 / 100)}  {
+         width: 45px;
+         height: 53px;
+         background-position: -427px -68px;
+     }
+     
+     #{percentage($stepGomuGomu * 20 / 100)}  {
+         width: 55px;
+         height: 53px;
+         background-position: -403px -131px;
+     }
+}

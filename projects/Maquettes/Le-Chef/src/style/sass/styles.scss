@@ -12,6 +12,8 @@ $black: #111;
 body {
    font-family: "Roboto", sans-serif;
    background: $bg-grey;
+   font-size:20px;
+   color:#000;
 }
 
 @import "./section/header";

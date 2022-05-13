@@ -1,0 +1,48 @@
+#team-section .container{
+    text-align: right;
+    .image-container{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .thumbnail{
+            position: relative;
+            border: 3px solid $white;
+            width:22%;
+            aspect-ratio:  1 / 1;
+
+            img{
+                display:block;
+                width:100%;
+                height:100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    ul {
+        margin-bottom: 50px;
+
+        li h2{
+            color:$darkGrey;
+            margin:15px 0;   
+            text-align: left;
+        }
+    }
+}
+#about{
+    background:$darkGrey;
+    text-align: right;
+    color:$white;
+
+    h2{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    p{
+        white-space: pre-wrap;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+}
