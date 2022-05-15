@@ -1,47 +1,48 @@
-header{
-    background-image: url('/projects/Maquettes/Atelier-du-design/src/img/bg-header.jpg');
-    background-size:cover;
-    background-position:center;
-    padding:10px;
+header {
+    background-image: url("../../img/bg-header.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
 
-    div{
-        display:flex;
+    div {
+        display: flex;
         align-items: center;
-        width:100%;
+        width: 100%;
 
-        h1{
+        h1 {
             margin: 0;
 
-            a img{
+            a img {
                 transition: $transition;
 
-                &:hover{
-                    opacity:0.6;
+                &:hover {
+                    opacity: 0.6;
                 }
             }
         }
 
-        nav{
-            display:flex;
-            flex-grow:1;
+        nav {
+            display: flex;
+            flex-grow: 1;
             justify-content: flex-end;
 
-            ul{
-                display:flex;
+            ul {
+                display: flex;
 
-                li{
-                    margin-left: 20px;;
+                li {
+                    margin-left: 20px;
                 }
             }
         }
     }
 
-    .container{
-        margin:0 auto;
-        h2{
-            font-family :"Montserrat", sans-serif;
-            color:$white;
-            font-weight:bold;
+    .container {
+        margin: 0 auto;
+        padding:0;
+        h2 {
+            font-family: "Montserrat", sans-serif;
+            color: $white;
+            font-weight: bold;
         }
     }
 }

@@ -26,6 +26,7 @@ $flexbox: #57a9f5;
 $maquettes: #fa5246;
 $sass: #c76494;
 $keyframes: #00796C;
+$phaser: #944141;
 
 $sidebar: 23%;
 
@@ -45,6 +46,7 @@ $sidebar: 23%;
 @include dynamicLanguageColor($vscode, "vscode");
 @include dynamicLanguageColor($sass, "sass");
 @include dynamicLanguageColor($keyframes, "keyframes");
+@include dynamicLanguageColor($phaser, "phaser");
 
 canvas {
    width: 100%;

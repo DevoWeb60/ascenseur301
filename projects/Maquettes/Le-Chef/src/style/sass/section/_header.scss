@@ -22,7 +22,7 @@ header {
        nav {
           display: flex;
           justify-content: flex-end;
-          width: 70%;
+          width: calc(100% - 172px);
           
           &.active{
              display:flex;
