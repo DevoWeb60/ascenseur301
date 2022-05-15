@@ -1,91 +1,91 @@
 $stepLuffyPunch: calc(100 / 22);
 @keyframes luffyPunch {
-   0% {
-      background-position: 0px calc(18.05 * 100px);
-      width: 100px;
-   }
-   #{percentage($stepLuffyPunch / 100)} {
-      background-position: -100px calc(18.05 * 100px);
-      width: 100px;
-   }
-   #{percentage($stepLuffyPunch * 3 / 100)} {
-      background-position: -215px calc(18.05 * 100px);
-      width: 120px;
-   }
-   #{percentage($stepLuffyPunch * 4 / 100)} {
-      background-position: -335px calc(18.05 * 100px);
-      width: 120px;
-   }
-   #{percentage($stepLuffyPunch * 5 / 100)} {
-      background-position: -450px calc(18.05 * 100px);
-      width: 100px;
-   }
-   #{percentage($stepLuffyPunch * 6 / 100)} {
-      background-position: -550px calc(18.05 * 100px);
-      width: 100px;
-   }
-   #{percentage($stepLuffyPunch * 6 / 100)} {
-      background-position: -650px calc(18.05 * 100px);
-      width: 100px;
-   }
-   #{percentage($stepLuffyPunch * 7 / 100)} {
-      background-position: -750px calc(18.05 * 100px);
-      width: 100px;
-   }
-   #{percentage($stepLuffyPunch * 8 / 100)} {
-      background-position: -900px calc(18.11 * 100px);
-      width: 120px;
-   }
-   #{percentage($stepLuffyPunch * 9 / 100)} {
-      background-position: -1035px calc(18.11 * 100px);
-      width: 100px;
-   }
-   #{percentage($stepLuffyPunch * 10 / 100)} {
-      background-position: -1140px calc(18.11 * 100px);
-      width: 100px;
-   }
-   #{percentage($stepLuffyPunch * 11 / 100)} {
-      background-position: -1240px calc(18.11 * 100px);
-      width: 100px;
-   }
-   #{percentage($stepLuffyPunch * 12 / 100)} {
-      background-position: -1340px calc(18.11 * 100px);
-      width: 120px;
-   }
-   #{percentage($stepLuffyPunch * 13 / 100)} {
-      background-position: -1450px calc(18.11 * 100px);
-      width: 120px;
-   }
-   #{percentage($stepLuffyPunch * 14 / 100)} {
-      background-position: -20px calc(16.67 * 100px);
-      width: 150px;
-   }
-   #{percentage($stepLuffyPunch * 15 / 100)} {
-      background-position: -165px calc(16.69 * 100px);
-      width: 180px;
-   }
-   #{percentage($stepLuffyPunch * 16 / 100)} {
-      background-position: -335px calc(16.70 * 100px);
-      width: 180px;
-   }
-   #{percentage($stepLuffyPunch * 17 / 100)} {
-      background-position: -517px calc(16.70 * 100px);
-      width: 180px;
-   }
-   #{percentage($stepLuffyPunch * 18 / 100)} {
-      background-position: -680px calc(16.73 * 100px);
-      width: 100px;
-   }
-   #{percentage($stepLuffyPunch * 19 / 100)} {
-      background-position: -790px calc(16.73 * 100px);
-      width: 100px;
-   }
-   #{percentage($stepLuffyPunch * 20 / 100)} {
-      background-position: -875px calc(16.73 * 100px);
-      width: 100px;
-   }
-   #{percentage($stepLuffyPunch * 21 / 100)} {
-      background-position: -961px calc(16.73 * 100px);
-      width: 100px;
-   }
+    0% {
+        background-position: 0px calc(18.05 * 100px);
+        width: 100px;
+    }
+    #{percentage($stepLuffyPunch / 100)} {
+        background-position: -100px calc(18.05 * 100px);
+        width: 100px;
+    }
+    #{percentage($stepLuffyPunch * 3 / 100)} {
+        background-position: -215px calc(18.05 * 100px);
+        width: 120px;
+    }
+    #{percentage($stepLuffyPunch * 4 / 100)} {
+        background-position: -335px calc(18.05 * 100px);
+        width: 120px;
+    }
+    #{percentage($stepLuffyPunch * 5 / 100)} {
+        background-position: -450px calc(18.05 * 100px);
+        width: 100px;
+    }
+    #{percentage($stepLuffyPunch * 6 / 100)} {
+        background-position: -550px calc(18.05 * 100px);
+        width: 100px;
+    }
+    #{percentage($stepLuffyPunch * 6 / 100)} {
+        background-position: -650px calc(18.05 * 100px);
+        width: 100px;
+    }
+    #{percentage($stepLuffyPunch * 7 / 100)} {
+        background-position: -750px calc(18.05 * 100px);
+        width: 100px;
+    }
+    #{percentage($stepLuffyPunch * 8 / 100)} {
+        background-position: -900px calc(18.11 * 100px);
+        width: 120px;
+    }
+    #{percentage($stepLuffyPunch * 9 / 100)} {
+        background-position: -1035px calc(18.11 * 100px);
+        width: 100px;
+    }
+    #{percentage($stepLuffyPunch * 10 / 100)} {
+        background-position: -1140px calc(18.11 * 100px);
+        width: 100px;
+    }
+    #{percentage($stepLuffyPunch * 11 / 100)} {
+        background-position: -1240px calc(18.11 * 100px);
+        width: 100px;
+    }
+    #{percentage($stepLuffyPunch * 12 / 100)} {
+        background-position: -1340px calc(18.11 * 100px);
+        width: 120px;
+    }
+    #{percentage($stepLuffyPunch * 13 / 100)} {
+        background-position: -1450px calc(18.11 * 100px);
+        width: 120px;
+    }
+    #{percentage($stepLuffyPunch * 14 / 100)} {
+        background-position: -20px calc(16.67 * 100px);
+        width: 150px;
+    }
+    #{percentage($stepLuffyPunch * 15 / 100)} {
+        background-position: -165px calc(16.69 * 100px);
+        width: 180px;
+    }
+    #{percentage($stepLuffyPunch * 16 / 100)} {
+        background-position: -335px calc(16.7 * 100px);
+        width: 180px;
+    }
+    #{percentage($stepLuffyPunch * 17 / 100)} {
+        background-position: -517px calc(16.7 * 100px);
+        width: 180px;
+    }
+    #{percentage($stepLuffyPunch * 18 / 100)} {
+        background-position: -680px calc(16.73 * 100px);
+        width: 100px;
+    }
+    #{percentage($stepLuffyPunch * 19 / 100)} {
+        background-position: -790px calc(16.73 * 100px);
+        width: 100px;
+    }
+    #{percentage($stepLuffyPunch * 20 / 100)} {
+        background-position: -875px calc(16.73 * 100px);
+        width: 100px;
+    }
+    #{percentage($stepLuffyPunch * 21 / 100)} {
+        background-position: -961px calc(16.73 * 100px);
+        width: 100px;
+    }
 }
