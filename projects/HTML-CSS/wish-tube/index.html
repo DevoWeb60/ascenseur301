@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         rel="shortcut icon"
+         href="../../../views/assets/favicon.png"
+         type="image/x-icon"
+      />
+      <script
+         src="https://kit.fontawesome.com/8ce2cffc6a.js"
+         crossorigin="anonymous"
+      ></script>
+      <link rel="stylesheet" href="./src/style/css/styles.min.css" />
+      <title>Ol'Project</title>
+   </head>
+   <body>
+      <div class="controls">
+         <div class="play">
+            <i class="fas fa-play"></i>
+         </div>
+         <div class="pause hide">
+            <i class="fas fa-pause"></i>
+         </div>
+         <input
+            type="range"
+            max="100"
+            id="watched"
+            min="0"
+            value="0"
+            name="currentTimeWatch"
+         />
+         <div class="duration">
+            <span class="played">00</span> :
+            <span class="durationVideo">00</span>
+         </div>
+         <div class="otherControl">
+            <div class="volume">
+               <i class="fas fa-volume-up"></i>
+            </div>
+            <div class="fullscreen">
+               <i class="fas fa-expand"></i>
+            </div>
+         </div>
+      </div>
+      <video preload="auto">
+         <source src="./src/videos/bigbuck.mp4" type="video/mp4" />
+         <source src="./src/videos/bigbuck.webm" type="video/webm" />
+         <source src="./src/videos/bigbuck.ogv" type="video/ogg" />
+      </video>
+      <script src="main.js" type="module"></script>
+   </body>
+</html>

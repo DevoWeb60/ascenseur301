@@ -30,7 +30,7 @@ $stepHighKick: calc(100 / 11);
    }
    #{percentage($stepHighKick * 7 / 100)} {
       background-position: -750px calc(-4 * 100px);
-      width: 100px;
+      width: 95px;
    }
    #{percentage($stepHighKick * 8 / 100)} {
       background-position: -835px calc(-4 * 100px);

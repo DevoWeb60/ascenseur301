@@ -1,0 +1,34 @@
+@import "./reset";
+
+body {
+   height: 100vh;
+   overflow: hidden;
+}
+
+$blue: #4e85fb;
+
+.franceMap {
+   margin: 40px auto;
+   height: 80%;
+
+   svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+   }
+
+   .region:hover path {
+      fill: lighten($blue, 20);
+   }
+
+   .departement.dpt {
+      fill: $blue;
+      stroke: lighten($blue, 10);
+      stroke-width: 2;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+         fill: darken($blue, 25);
+      }
+   }
+}
