@@ -1,0 +1,50 @@
+.input-group {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   margin-bottom: 50px;
+
+   input,
+   textarea {
+      outline: none;
+      border: none;
+      background: transparent;
+      border-bottom: 3px solid $darkGrey;
+      resize: none;
+      height: 37px;
+      width: 100%;
+      padding: 5px;
+
+      &::placeholder {
+         color: transparent;
+      }
+
+      &:not(:placeholder-shown) + label,
+      &:focus + label {
+         transform: translate(0, -100%);
+         font-size: 14px;
+      }
+   }
+
+   textarea {
+      transition: $transition;
+
+      &:focus,
+      &:not(:placeholder-shown) {
+         height: 12em;
+      }
+   }
+
+   label {
+      position: absolute;
+      top: 0;
+      transition: $transition;
+   }
+
+   input,
+   textarea,
+   label {
+      cursor: pointer;
+   }
+}

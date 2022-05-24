@@ -1,0 +1,17 @@
+.btn,
+.btn-red {
+   padding: 7px 13px;
+   border: 2px solid transparent;
+   font-size: $fs-p;
+   background: transparent;
+   font-weight: bold;
+   border-radius: $borderRadius;
+   transition: $transition;
+   cursor: pointer;
+}
+.btn {
+   @include btn($white, $red);
+}
+.btn-red {
+   @include btn($red, $white);
+}

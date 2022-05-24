@@ -5,3 +5,4 @@ app.playVideo();
 app.pauseVideo();
 app.currentWatchTime();
 app.setCurrentWatchTime();
+app.toggleFullScreen();

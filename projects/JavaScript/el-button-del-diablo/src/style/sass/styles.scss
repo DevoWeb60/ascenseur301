@@ -1,0 +1,18 @@
+@import "./reset";
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+.btn {
+   background: #8d1d1d;
+   border-radius: 50%;
+   overflow: hidden;
+
+   img {
+      cursor: pointer;
+   }
+}

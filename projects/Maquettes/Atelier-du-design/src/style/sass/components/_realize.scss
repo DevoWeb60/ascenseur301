@@ -1,0 +1,48 @@
+.realize {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   height: 500px;
+   color: $darkGrey;
+
+   .content,
+   img {
+      width: 50%;
+      height: 100%;
+   }
+
+   img {
+      object-fit: cover;
+   }
+
+   .content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 100px;
+
+      p,
+      h4 {
+         margin: 0;
+         text-align: left;
+      }
+
+      p {
+         margin-top: 10px;
+         margin-bottom: 50px;
+      }
+
+      .btn,
+      .btn-red {
+         align-self: flex-end;
+         width: 50%;
+      }
+   }
+
+   &.invert {
+      color: $white;
+      background: $darkGrey;
+      flex-direction: row-reverse;
+   }
+}

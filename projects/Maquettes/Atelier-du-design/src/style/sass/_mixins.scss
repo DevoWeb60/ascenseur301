@@ -1,0 +1,9 @@
+@mixin btn($primary, $secondary) {
+   border-color: $primary;
+   color: $primary;
+
+   &:hover {
+      background: $primary;
+      color: $secondary;
+   }
+}

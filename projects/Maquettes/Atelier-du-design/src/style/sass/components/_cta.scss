@@ -1,0 +1,24 @@
+.cta {
+   text-align: center;
+   padding: 100px 0;
+
+   h2 {
+      color: $darkGrey;
+   }
+
+   .btn {
+      @include btn($red, $white);
+   }
+
+   &.invert {
+      background: $darkGrey;
+
+      h2 {
+         color: $white;
+      }
+
+      .btn {
+         @include btn($white, $red);
+      }
+   }
+}

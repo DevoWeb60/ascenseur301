@@ -17,10 +17,10 @@
         <ul>
             <li><h2>René Sens - Architecture</h2></li>
             <li><h2>Laure Brille - Architecture d'Intérieur</h2></li>
-            <li><h2>Bil Hattérahl - Design Mobilier</h2></li>
+            <li><h2>Bill Hattérahl - Design Mobilier</h2></li>
             <li><h2>Pénélope Solette - Design objet</h2></li>
         </ul>
-        <a href="./index.php?page=team" class="btn-red">Découvrez l'équipe</a>
+        <a href="./index.php?page=equipe" class="btn-red">Découvrez l'équipe</a>
     </div>
 </div>
 
@@ -37,7 +37,33 @@ Collaborer avec d’autres passionnés
 Le pouvoir de l’artisanat et du design pour faire du bien
 La richesse de l’urbanité
         </p>
-        <a href="./index.php?page=agency" class="btn">Découvrez l'agence</a>
+        <a href="./index.php?page=agence" class="btn">Découvrez l'agence</a>
     </div>
 </section>
 
+<section class="realize">
+    <img src="./src/img/nouvelle-creation.jpg" alt="Nouvelle Création">
+    <div class="content">
+        <h2>Nouvelle Création</h2>
+        <h4 class="bold">Pénéloppe Solette</h4>
+        <p>Colorés, esthétiques et chics, les nouvelles lampes à poser en mosaïque
+    vitrail au design bohème, mixe de styles Art déco associé à une touche
+    ethnique comme un souvenir de voyages</p>
+    <a href="*index.php?page=realisation" class="btn-red">Découvrez nos réalisations</a>
+    </div>
+</section>
+
+<section class="realize invert">
+    <img src="./src/img/prix-design-2018.jpg" alt="Prix de Design 2018" />
+    <div class="content">
+        <h2>Prix du design 2018</h2>
+        <h4 class="bold">Bill Hattérahl</h4>
+        <p>Mélange contemporain et moderne avec une touche de touche rustique, cette banquette avec ses lignes arrondies sinueuses inspirées du design danois est un classique vintage. Le rotin teinté dans les tons acajou et ébène est habilement tissé à la main. Les bases en fer foncé apportent un soutien robuste et un contraste visuel à cette banquette élégante.</p>
+        <a href="*index.php?page=realisation" class="btn">Découvrez nos réalisations</a>
+    </div>
+</section>
+
+<section class="cta">
+    <h2 class="lower">Vous avez un projet ?</h2>
+    <a href="./index.php?page=contact" class="btn">Contactez nous</a>
+</section>

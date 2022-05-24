@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,900&family=Rozha+One&display=swap");
 @import "./reset";
 @import "./variables";
+@import "./mixins";
 
 // !LAYOUT
 @import "./layout/header";
@@ -8,96 +9,68 @@
 
 // !PAGES
 @import "./pages/home";
+@import "./pages/agency";
+@import "./pages/team";
+@import "./pages/reels";
+@import "./pages/contact";
+@import "./pages/404";
 
 // !GENERAL
 body {
-    background: $lightGrey;
-    font-family: "Montserrat", sans-serif;
-    font-size: 20px;
-    color: #000;
+   background: $lightGrey;
+   font-family: "Montserrat", sans-serif;
+   font-size: 20px;
+   color: #000;
 }
 ul {
-    list-style: none;
-    padding-left: 0;
+   list-style: none;
+   padding-left: 0;
 }
 a {
-    text-decoration: none;
+   text-decoration: none;
+   transition: $transition;
+}
+.container {
+   width: 1000px;
+   padding: 100px 0;
+   margin: 0 auto;
 }
 
 // !COMPONENT
-.btn,
-.btn-red {
-    padding: 7px 13px;
-    border: 2px solid $white;
-    color: $white;
-    font-size: $fs-p;
-    font-weight: bold;
-    border-radius: $borderRadius;
-    transition: $transition;
-
-    &:hover {
-        background: $white;
-        color: $red;
-    }
-}
-.btn-red {
-    border-color: $red;
-    color: $red;
-
-    &:hover {
-        background: $red;
-        color: $white;
-    }
-}
-.link {
-    color: $white;
-    font-weight: bold;
-    font-size: $fs-p;
-    transition: $transition;
-
-    &:hover {
-        opacity: 0.6;
-    }
-}
-.container {
-    width: 1000px;
-    padding: 100px 0;
-    margin: 0 auto;
-}
-.flex-section {
-    display: flex;
-
-    .content,
-    img {
-        width: 50%;
-    }
-
-    img {
-        display: block;
-    }
-
-    &.invert {
-        flex-direction: row-reverse;
-    }
-}
+@import "./components/buttons";
+@import "./components/cta";
+@import "./components/inputGroup";
+@import "./components/realize";
 
 // !TEXT
 h2 {
-    font-family: $rozhaOne;
-    font-size: $fs-h2;
-    font-weight: 400;
-    text-transform: uppercase;
+   font-family: $rozhaOne;
+   font-size: $fs-h2;
+   font-weight: 400;
+   text-transform: uppercase;
 }
 
 h2.lower {
-    font-family: $rozhaOne;
-    font-size: $fs-h2;
-    font-weight: 400;
+   font-family: $rozhaOne;
+   font-size: $fs-h2;
+   font-weight: 400;
+   text-transform: unset;
 }
 
-p {
-    font-family: $montSerrat;
-    font-size: $fs-p;
-    font-weight: 400;
-    line-height: 150%;
+p,
+.text {
+   font-family: $montSerrat;
+   font-size: $fs-p;
+   font-weight: 400;
+   line-height: 150%;
+}
+.link {
+   color: $white;
+   font-weight: bold;
+   font-size: $fs-p;
+   transition: $transition;
+
+   &:hover {
+      opacity: 0.6;
+   }
 }

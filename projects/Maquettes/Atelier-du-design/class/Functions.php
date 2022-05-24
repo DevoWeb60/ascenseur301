@@ -1,10 +1,11 @@
 <?php 
     class Functions{
 
-        function debug($var){
+        static function dd($var){
             echo '<pre>';
             var_dump($var);
             echo "</pre>";
+            die();
         }
     }
 
