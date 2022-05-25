@@ -1,0 +1,26 @@
+@mixin spaceBetween {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+@mixin flexCenter {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+@mixin flexGrid {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+@mixin flexRowAndReverse {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+
+   &.reverse {
+      flex-direction: row-reverse;
+   }
+}

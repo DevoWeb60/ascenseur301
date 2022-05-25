@@ -1,0 +1,160 @@
+#hero {
+   @include flexCenter;
+   height: 83vh;
+   background-image: url("../../../src/img/background.webp");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   color: $textOnDark;
+   text-align: center;
+
+   .title,
+   .subtitle {
+      color: $textOnDark;
+   }
+}
+#explore {
+   background: $bg-light;
+   text-align: center;
+   .text {
+      column-count: 2;
+      column-gap: 76px;
+   }
+}
+
+#community {
+   .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(308px, 1fr));
+      gap: 16px;
+      text-align: center;
+
+      .card {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+      .text {
+         width: 75%;
+         text-align: center;
+      }
+
+      .card-footer {
+         h4 {
+            margin: 0;
+            font-size: 14px;
+            color: $black;
+         }
+         .name {
+            margin-bottom: 8px;
+            text-transform: uppercase;
+         }
+         .info {
+            font-weight: normal;
+         }
+      }
+   }
+}
+
+#testimonials {
+   background: $blue;
+   color: $white;
+   h2 {
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0;
+      margin-bottom: 50px;
+      font-size: 13px;
+   }
+
+   .rates {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+      gap: 75px;
+
+      .bigText,
+      .name,
+      .info {
+         margin: 0;
+      }
+
+      hr {
+         opacity: 0.3;
+         margin: 30px 0;
+      }
+      .name {
+         font-size: 13px;
+         margin-bottom: 3px;
+      }
+      .info.text {
+         margin-bottom: 0;
+         font-size: 14px;
+         font-weight: normal;
+      }
+   }
+}
+
+#experience {
+   background: $bg-light;
+}
+#experience,
+#future {
+   img {
+      width: 33%;
+   }
+   .content {
+      width: 60%;
+      h2,
+      .text {
+         margin: 0;
+         margin-bottom: 20px;
+      }
+
+      h2 {
+         text-align: left;
+      }
+   }
+}
+
+#discover {
+   background: $anthracite;
+   color: $textOnDark;
+   text-align: center;
+
+   img,
+   h2.title {
+      margin: 0;
+      margin-bottom: 70px;
+   }
+
+   .title {
+      color: $textOnDark;
+   }
+
+   .text {
+      width: 68%;
+      margin: 0 auto;
+      text-align: center;
+   }
+}
+
+#init {
+   text-align: center;
+
+   .cards-icon {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(227px, 1fr));
+      gap: 16px;
+   }
+
+   .card-icon {
+      h4 {
+         text-transform: uppercase;
+         margin: 20px 0 10px 0;
+      }
+      h4,
+      .description {
+         font-size: 14px;
+      }
+   }
+}

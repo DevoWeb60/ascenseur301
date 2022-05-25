@@ -1,0 +1,22 @@
+.btn {
+   display: inline-block;
+   background: $blue;
+   border: 3px solid transparent;
+   color: $white;
+   padding: 15px 28px;
+   border-radius: $borderRadius;
+   font-weight: bold;
+   font-family: $fontRaleway;
+   font-size: $fs-textSmall;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   transition: $transition;
+   cursor: pointer;
+
+   &:hover {
+      opacity: 1;
+      background: transparent;
+      border-color: $blue;
+      color: $blue;
+   }
+}

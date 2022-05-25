@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Raleway:wght@400;700&display=swap");
+@import "./reset";
+@import "./variables";
+@import "./mixins";
+
+html,
+body {
+   font-family: $fontRaleway;
+   color: $textOnWhite;
+   background: #fff;
+   font-size: $fs-textLarge;
+}
+.container {
+   width: 956px;
+   margin: 0 auto;
+}
+a {
+   text-decoration: none;
+   color: $white;
+   transition: $transition;
+
+   &:hover {
+      opacity: 0.6;
+   }
+}
+ul {
+   margin: 0;
+   padding-left: 0;
+   list-style: none;
+}
+section {
+   padding: 100px 0;
+}
+.mb-60 {
+   margin-bottom: 60px;
+}
+.mb-30 {
+   margin-bottom: 30px;
+}
+.flex-row {
+   @include flexRowAndReverse;
+}
+
+// !LAYOUT
+@import "./layout/header";
+@import "./layout/footer";
+
+// !PAGES
+@import "./pages/home";
+
+// !COMPONENT
+@import "./components/btn";
+
+// !TEXT
+h1 {
+   text-transform: uppercase;
+   font-size: 16px;
+   font-weight: bold;
+
+   a {
+      color: $white;
+   }
+}
+
+.text {
+   font-family: $fontLora;
+   font-size: $fs-textLarge;
+   margin-bottom: 60px;
+   text-align: left;
+   line-height: 140%;
+}
+
+.subtitle {
+   font-family: $fontLora;
+   font-size: $fs-subtitle;
+   text-align: center;
+   font-weight: 500;
+   margin-bottom: 60px;
+}
+
+.title {
+   font-family: $fontRaleway;
+   font-size: $fs-title;
+   text-align: center;
+   color: $black;
+}
+
+.bigText {
+   font-family: $fontLora;
+   font-size: $fs-textBig;
+}
+
+@import "./responsive";

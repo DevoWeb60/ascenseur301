@@ -1,0 +1,68 @@
+header {
+   position: relative;
+   @include spaceBetween;
+   background: $darkGrey;
+   padding: 55px 122px;
+
+   nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: calc(100% - 100px);
+
+      ul {
+         display: flex;
+
+         &.active {
+            position: absolute;
+            width: 250px;
+            bottom: 0;
+            right: 0;
+            background: $darkGrey;
+            margin: 0;
+            border-radius: 0 0 0 50px;
+            transform: translate(0, calc(100% - 1px));
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+
+            li a {
+               margin: 0;
+               display: block;
+               padding: 20px;
+               text-align: center;
+
+               &:hover {
+                  background: rgba(255, 255, 255, 0.3);
+               }
+            }
+         }
+
+         li a {
+            color: $white;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 15px;
+            font-size: 12px;
+         }
+      }
+   }
+
+   #hamburger,
+   #close {
+      display: none;
+
+      img {
+         display: block;
+         width: 40px;
+      }
+   }
+
+   #hamburger.hide {
+      display: none;
+   }
+
+   #close.active {
+      display: block;
+   }
+}
