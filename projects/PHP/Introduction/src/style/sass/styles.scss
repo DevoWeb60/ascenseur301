@@ -1,0 +1,194 @@
+@import "./reset";
+
+$light: #ededed;
+$black: #000;
+$grey: #555;
+$white: #fff;
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    color: #000;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+
+    &.salmon {
+        color: $light;
+        background: salmon;
+    }
+
+    ::selection {
+        background: $white;
+        color: salmon;
+        border-radius: 10px;
+    }
+}
+
+h1 {
+    font-size: 10.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ariane {
+    &.salmon {
+        a {
+            color: $light;
+        }
+        a:nth-child(odd) {
+            color: $white;
+        }
+    }
+
+    font-size: 20px;
+
+    a {
+        color: $grey;
+        opacity: 0.6;
+        text-decoration: none;
+    }
+
+    a:nth-child(odd) {
+        color: $black;
+        text-decoration: none;
+    }
+
+    a:last-child {
+        opacity: 1;
+        font-weight: bold;
+    }
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.select {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    &.salmon select {
+        color: $white;
+        border-color: $white;
+
+        option {
+            color: salmon;
+        }
+    }
+
+    select {
+        margin: 20px 0;
+        padding: 7px;
+        width: 33%;
+        border: none;
+        border-bottom: 2px solid $black;
+        outline: none;
+        background: transparent;
+
+        & option {
+            color: $grey;
+        }
+    }
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: $grey;
+    color: $light;
+    margin: 30px auto;
+
+    &.salmon {
+        background: $light;
+        color: salmon;
+    }
+    p {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+table {
+    border-collapse: collapse;
+    border: 2px solid $grey;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    width: 250px;
+    flex-grow: 1;
+    &.salmon {
+        border-color: $light;
+
+        th {
+            background: $light;
+            color: salmon;
+        }
+
+        tr {
+            border-bottom: 1px solid $light;
+
+            &:hover {
+                background: $light;
+
+                td {
+                    color: salmon;
+                }
+            }
+        }
+
+        td {
+            color: $light;
+            // border-right: 1px solid $light;
+        }
+
+        .result {
+            color: $white;
+        }
+    }
+
+    tr {
+        border-bottom: 1px solid $grey;
+        transition: 0.4s ease-in-out;
+
+        &:hover {
+            background: $grey;
+
+            td {
+                color: $light;
+            }
+        }
+    }
+
+    th {
+        color: $white;
+        background: $grey;
+        padding: 10px;
+    }
+
+    td {
+        width: 40px;
+        text-align: center;
+        color: $grey;
+        padding: 10px;
+
+        // border-right: 1px solid $grey;
+    }
+
+    .result {
+        color: $black;
+        font-weight: bolder;
+    }
+}
