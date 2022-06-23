@@ -1,0 +1,52 @@
+.todo-list {
+    background: rgba($white, 0.4);
+    color: $primary;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba($black, 0.3);
+    backdrop-filter: blur(10px);
+
+    h2 {
+        font-size: 40px;
+        margin: 0 0 20px 0;
+    }
+
+    .todos {
+        list-style: none;
+
+        .todo {
+            margin: 10px 0;
+            display: grid;
+            grid-template-columns: 0.1fr 1.9fr 0.1fr;
+            align-items: center;
+            font-size: 22px;
+
+            .delete {
+                color: $danger;
+                font-size: 30px;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    #addTask {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 0.1fr;
+        gap: 10px;
+
+        .form-group {
+            margin: 0;
+        }
+
+        .btn-container {
+            margin: 0;
+        }
+    }
+}

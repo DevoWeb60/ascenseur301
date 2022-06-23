@@ -1,0 +1,72 @@
+form.auth-form {
+    background: rgba($white, 0.4);
+    width: 500px;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba($black, 0.5);
+
+    h2 {
+        color: $primary;
+        text-align: center;
+    }
+
+    .error,
+    .success {
+        margin: 50px auto 20px auto;
+        text-align: center;
+        padding: 15px 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba($black, 0.3);
+        font-weight: 600;
+    }
+    .error {
+        color: darken($danger, 20);
+        background: lighten($danger, 40);
+    }
+
+    .success {
+        color: darken($success, 20);
+        background: lighten($success, 40);
+    }
+}
+.form-group {
+    margin: 25px 0;
+    position: relative;
+
+    label {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        font-size: 20px;
+        margin: 10px 0;
+        pointer-events: none;
+        transition: 0.3s ease-in-out;
+        color: $primary;
+    }
+
+    input {
+        width: 100%;
+        border: 2px solid $primary;
+        outline: none;
+        background: transparent;
+        border-radius: 5px;
+        font-size: 20px;
+        padding: 10px 10px;
+        color: $primary;
+        transition: 0.3s ease-in-out;
+
+        &::placeholder {
+            color: transparent;
+        }
+        &:focus + label,
+        &:not(:placeholder-shown) + label {
+            transform: translateY(-150%);
+            font-size: 13px;
+            color: $secondary;
+        }
+        &:focus,
+        &:not(:placeholder-shown) {
+            border-color: $secondary;
+        }
+    }
+}

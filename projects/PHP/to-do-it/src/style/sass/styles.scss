@@ -1,0 +1,113 @@
+@import "./reset";
+
+$white: #fff;
+$black: #000;
+$secondary: #c2a9fd;
+$primary: darken($secondary, 70);
+$danger: #b20000;
+$success: #049f20;
+
+html,
+body {
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333;
+    background-color: transparent;
+}
+body {
+    display: grid;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Titan One", cursive;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 0.7fr 0.3fr;
+    grid-auto-rows: 1fr;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    padding: 20px;
+}
+.btn-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@import "./partials/background";
+@import "./partials/form";
+@import "./partials/todolist";
+@import "./partials/userlist";
+
+.btn {
+    display: inline-block;
+    background: transparent;
+    border: 2px solid $black;
+    color: $black;
+    padding: 7px 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 9999px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+
+    &.primary {
+        border: 2px solid $primary;
+        color: $secondary;
+        background: $primary;
+
+        &:hover {
+            background: transparent;
+            color: $primary;
+        }
+
+        &.outline {
+            border: 2px solid $primary;
+            color: $primary;
+            background: transparent;
+
+            &:hover {
+                background: $primary;
+                color: $secondary;
+            }
+        }
+    }
+
+    &.secondary {
+        border: 2px solid $secondary;
+        color: $primary;
+        background: $secondary;
+
+        &:hover {
+            background: transparent;
+            color: $secondary;
+        }
+
+        &.outline {
+            border: 2px solid $secondary;
+            color: $secondary;
+            background: transparent;
+
+            &:hover {
+                background: $secondary;
+                color: $primary;
+            }
+        }
+    }
+}
