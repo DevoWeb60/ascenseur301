@@ -13,15 +13,15 @@ $pages = [
    'Home' => "index.php?page=Home",
 ];
 
-include 'layout/head.php';
+include './src/layout/head.php';
 
 switch ($title) {
    case 'Home':
-      include 'home.php';
+      include './src/pages/home.php';
       break;
    default:
-      include 'home.php';
+      include './src/pages/home.php';
       break;
 }
 
-include 'layout/foot.php';
+include './src/layout/foot.php';

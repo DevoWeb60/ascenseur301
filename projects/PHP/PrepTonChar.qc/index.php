@@ -20,6 +20,21 @@ $pages = [
    'Récapitulatif' => 'index.php?page=Récapitulatif&amp;car=' . $carSelect . '&amp;model=' . $carModelSelect . '&amp;color=',
 ];
 
+getSecure($carSelect, array_key_exists($carSelect, $cars), function () use ($pages) {
+   redirectTo($pages['Home']);
+});
+
+if (isset($carSelect)) {
+   getSecure($carModelSelect, in_array($carModelSelect, $cars[$carSelect]['models']), function () use ($pages) {
+      redirectTo($pages['Home']);
+   });
+}
+
+if (isset($carColorSelect)) {
+   getSecure($carColorSelect, array_key_exists($carColorSelect, $randomHexaColors), function () use ($pages) {
+      redirectTo($pages['Home']);
+   });
+}
 
 include './src/layout/head.php';
 
