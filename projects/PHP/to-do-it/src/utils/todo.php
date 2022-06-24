@@ -39,7 +39,7 @@ if ($title == "delete" && isset($_GET['id']) && !empty($_GET['id'])) {
 }
 
 if (isset($_POST['update']) && $_POST['update'] == 1) {
-    $db->prepare('UPDATE todo SET checked = 0')->execute([]);
+    $db->prepare('UPDATE todo SET checked = 0 WHERE user_id = ?')->execute([$_SESSION['user']['id']]);
     foreach ($_POST['task'] as $todoId => $checked) {
         $task = strSecur($checked);
         $todo = $db->prepare('UPDATE todo SET checked = ? WHERE id = ? AND user_id = ?');

@@ -3,22 +3,24 @@ session_start();
 require_once './src/utils/functions.php';
 require_once './src/utils/database.php';
 
-$title = "Accueil";
-
-
-if (isset($_GET['page'])) {
-   $title = htmlspecialchars(trim($_GET['page']));
-}
-if (!isset($_SESSION['connected']) && $title == "Accueil") {
-   $title = "Connexion";
-}
-
 $pages = [
    'Accueil' => "index.php?page=Accueil",
    'Connexion' => 'index.php?page=Connexion',
    'Inscription' => 'index.php?page=Inscription',
    'logout' => 'index.php?page=logout',
 ];
+
+if (!array_key_exists($_GET['page'], $pages)) {
+   $title = "Accueil";
+} else {
+   $title = htmlspecialchars(trim($_GET['page']));
+}
+
+
+if (!isset($_SESSION['connected']) && $title == "Accueil") {
+   redirectTo($pages['Connexion']);
+}
+
 require_once './src/utils/login.php';
 require_once './src/utils/register.php';
 require_once './src/utils/todo.php';
