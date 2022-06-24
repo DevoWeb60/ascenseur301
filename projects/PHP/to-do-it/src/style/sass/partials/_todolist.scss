@@ -1,5 +1,9 @@
 .todo-list {
     background: rgba($white, 0.4);
+    background-image: url("../../img/doit.png");
+    background-size: 10%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
     color: $primary;
     width: 100%;
     padding: 30px;
@@ -18,11 +22,12 @@
         .todo {
             margin: 10px 0;
             display: grid;
-            grid-template-columns: 0.1fr 1.9fr 0.1fr;
+            grid-template-columns: 0.1fr 1.9fr 0.1fr 0.1fr;
             align-items: center;
             font-size: 22px;
 
-            .delete {
+            .delete,
+            .update {
                 color: $danger;
                 font-size: 30px;
                 cursor: pointer;
@@ -32,10 +37,13 @@
                     transform: scale(1.1);
                 }
             }
+            .update {
+                color: $white;
+            }
         }
     }
 
-    #addTask {
+    .addTask {
         margin-top: 50px;
         display: grid;
         grid-template-columns: 1fr 0.1fr;

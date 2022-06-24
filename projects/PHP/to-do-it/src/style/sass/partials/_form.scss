@@ -1,6 +1,6 @@
 form.auth-form {
     background: rgba($white, 0.4);
-    width: 500px;
+    width: 100%;
     padding: 50px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba($black, 0.5);
@@ -8,25 +8,6 @@ form.auth-form {
     h2 {
         color: $primary;
         text-align: center;
-    }
-
-    .error,
-    .success {
-        margin: 50px auto 20px auto;
-        text-align: center;
-        padding: 15px 30px;
-        border-radius: 10px;
-        box-shadow: 0 0 5px rgba($black, 0.3);
-        font-weight: 600;
-    }
-    .error {
-        color: darken($danger, 20);
-        background: lighten($danger, 40);
-    }
-
-    .success {
-        color: darken($success, 20);
-        background: lighten($success, 40);
     }
 }
 .form-group {
@@ -70,3 +51,4 @@ form.auth-form {
         }
     }
 }
+@import "./checkbox";
