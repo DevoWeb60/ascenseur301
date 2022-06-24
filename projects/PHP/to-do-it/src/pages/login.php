@@ -1,7 +1,7 @@
 <form method="POST" class="auth-form" action="">
     <h2>TO DO IT</h2>
     <div class="form-group">
-        <input type="text" name="username" placeholder="Identifiant">
+        <input type="text" name="username" placeholder="Identifiant" value="<?= isset($_POST['username']) ? strSecur($_POST['username']) : "" ?>">
         <label for="username">Identifiant</label>
     </div>
     <div class="form-group">

@@ -17,6 +17,10 @@ if (isset($_GET['user']) && !empty($_GET['user']) && $_GET['user'] > 0 && $_GET[
     $allUsers = $db->prepare('SELECT users.username FROM users WHERE id = ?');
     $allUsers->execute([$userId]);
     $otherUser = $allUsers->fetch();
+
+    if (!$otherUser) {
+        redirectTo($pages['Accueil']);
+    }
 }
 
 

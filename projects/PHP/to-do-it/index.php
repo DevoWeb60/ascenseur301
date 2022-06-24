@@ -9,11 +9,14 @@ $pages = [
    'Inscription' => 'index.php?page=Inscription',
    'logout' => 'index.php?page=logout',
 ];
-
-if (!array_key_exists($_GET['page'], $pages)) {
+if (!isset($_GET['page'])) {
    $title = "Accueil";
 } else {
-   $title = htmlspecialchars(trim($_GET['page']));
+   if (!array_key_exists($_GET['page'], $pages)) {
+      $title = "Accueil";
+   } else {
+      $title = htmlspecialchars(trim($_GET['page']));
+   }
 }
 
 

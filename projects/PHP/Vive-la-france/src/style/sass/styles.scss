@@ -1,0 +1,66 @@
+@import "./reset";
+
+html,
+body {
+    min-height: 100%;
+    color: #333;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-image: url("../../img/flag.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.regions,
+.departements,
+.villes {
+    flex-grow: 1;
+    background: rgba(black, 0.9);
+    color: white;
+    border-radius: 3px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            padding: 0 30px;
+            font-size: 20px;
+
+            &:nth-child(odd) a {
+                color: rgba(white, 0.6);
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:nth-child(odd) {
+                    color: rgba(white, 0.6);
+                }
+            }
+        }
+    }
+}

@@ -10,4 +10,9 @@ define('DB_PASS', 'NOpWqDs2');
 define('DB_NAME', 'thibaultberthelin_todos');
 
 // database connection
-$db = new PDO("mysql:host=" . DB_HOST . " ;dbname=" . DB_NAME . ";charset=utf8", DB_USER, DB_PASS);
+try {
+    $db = new PDO("mysql:host=" . DB_HOST . " ;dbname=" . DB_NAME . ";charset=utf8", DB_USER, DB_PASS);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
