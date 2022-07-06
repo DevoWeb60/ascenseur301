@@ -8,6 +8,7 @@ $pages = [
    'Connexion' => 'index.php?page=Connexion',
    'Inscription' => 'index.php?page=Inscription',
    'logout' => 'index.php?page=logout',
+   'delete' => "index.php?page=delete&amp;id=",
 ];
 if (!isset($_GET['page'])) {
    $title = "Accueil";

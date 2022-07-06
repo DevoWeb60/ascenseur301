@@ -41,7 +41,7 @@
                             <input type="checkbox" id="<?= $todo['id'] ?>" name="task[<?= $todo['id'] ?>]" <?= $todo['checked'] == 1 ? 'checked' : '' ?> value="1">
                             <label class="todo-text" for="<?= $todo['id'] ?>"><?= $todo['name'] ?></label>
                             <a href="index.php?page=Accueil&update=<?= $todo['id'] ?>" class="update"><i class="fas fa-edit"></i></i></a>
-                            <a href="index.php?page=delete&id=<?= $todo['id'] ?>" class="delete"><i class="far fa-times-circle"></i></a>
+                            <a href="<?= $pages['delete'] . $todo['id'] ?>" class="delete"><i class="far fa-times-circle"></i></a>
                         </li>
                     <?php endforeach; ?>
                 </ul>
