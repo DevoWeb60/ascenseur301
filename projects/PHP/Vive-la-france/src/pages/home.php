@@ -47,7 +47,7 @@
                     </li>
                 <?php
                 else : ?>
-                    <li><span><?= $ville->code_postal ?></span>
+                    <li><span><?= number_format($ville->code_postal, 0, ' ', ' ') ?></span>
                         <?php if (strpos($ville->code_postal, '60') === 0) : ?>
                             <a href="<?= $pages['entreprise'] . $ville->code_postal ?>"><?= $ville->nom_reel ?></a>
                         <?php else : ?>

@@ -2,10 +2,13 @@
 
 class Database
 {
+    // private $username = "thibaultberthelin";
+    // private $password = "NOpWqDs2";
+    // private $database = "thibaultberthelin_";
     private $username = "devoweb";
     private $password = "root";
     private $host = "localhost:3306";
-    private $database = "france";
+    private $database = "";
     private $charset = 'utf8';
 
     function __construct()
