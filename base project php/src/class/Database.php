@@ -10,20 +10,28 @@ class Database
     private $host = "localhost:3306";
     private $database = "";
     private $charset = 'utf8';
+    private $db;
 
     function __construct()
     {
-        return $this->connect();
+        $this->connect();
     }
 
     public function connect()
     {
         try {
-            $db = new PDO("mysql:host=" . $this->host . " ;dbname=" . $this->database . ";charset=" . $this->charset, $this->username, $this->password);
-            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->db = new PDO("mysql:host=" . $this->host . " ;dbname=" . $this->database . ";charset=" . $this->charset, $this->username, $this->password);
+            $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $this->db;
         } catch (PDOException $e) {
             echo "Erreur Base de donnée : " . $e->getMessage();
         }
-        return $db;
+    }
+
+    public function query($sql, $params)
+    {
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute($params);
+        return $stmt;
     }
 }

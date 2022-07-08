@@ -1,16 +1,16 @@
 <header>
     <div>
         <h1>
-            <a href="./index.php">
-                <img src="./src/img/Logo.svg" alt="Atelier du Design">
+            <a href="<?= $pages['accueil'] ?>">
+                <img src="./src/img/<?= $siteInfo->logo ?>" alt="<?= $siteInfo->title ?>">
             </a>
         </h1>
         <nav>
             <ul>
-                <li><a class="link" href="./index.php?page=agence">L'agence</a></li>
-                <li><a class="link" href="./index.php?page=equipe">L'équipe</a></li>
-                <li><a class="link" href="./index.php?page=realisation">Nos réalisations</a></li>
-                <li><a class="btn" href="./index.php?page=contact">Contact</a></li>
+                <li><a class="link" href="<?= $pages['agence'] ?>">L'agence</a></li>
+                <li><a class="link" href="<?= $pages['equipe'] ?>">L'équipe</a></li>
+                <li><a class="link" href="<?= $pages['realisations'] ?>">Nos réalisations</a></li>
+                <li><a class="btn" href="<?= $pages['contact'] ?>">Contact</a></li>
             </ul>
         </nav>
     </div>

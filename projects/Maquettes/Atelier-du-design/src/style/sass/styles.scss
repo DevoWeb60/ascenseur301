@@ -17,23 +17,23 @@
 
 // !GENERAL
 body {
-   background: $lightGrey;
-   font-family: "Montserrat", sans-serif;
-   font-size: 20px;
-   color: #000;
+    background: $lightGrey;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color: #000;
 }
 ul {
-   list-style: none;
-   padding-left: 0;
+    list-style: none;
+    padding-left: 0;
 }
 a {
-   text-decoration: none;
-   transition: $transition;
+    text-decoration: none;
+    transition: $transition;
 }
 .container {
-   width: 1000px;
-   padding: 100px 0;
-   margin: 0 auto;
+    width: 1000px;
+    padding: 100px 0;
+    margin: 0 auto;
 }
 
 // !COMPONENT
@@ -41,36 +41,51 @@ a {
 @import "./components/cta";
 @import "./components/inputGroup";
 @import "./components/realize";
+@import "./components/modal";
 
 // !TEXT
 h2 {
-   font-family: $rozhaOne;
-   font-size: $fs-h2;
-   font-weight: 400;
-   text-transform: uppercase;
+    font-family: $rozhaOne;
+    font-size: $fs-h2;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.t-center {
+    text-align: center;
+}
+
+.c-dark {
+    color: $darkGrey;
+}
+.c-light {
+    color: $lightGrey;
 }
 
 h2.lower {
-   font-family: $rozhaOne;
-   font-size: $fs-h2;
-   font-weight: 400;
-   text-transform: unset;
+    font-family: $rozhaOne;
+    font-size: $fs-h2;
+    font-weight: 400;
+    text-transform: unset;
 }
 
 p,
 .text {
-   font-family: $montSerrat;
-   font-size: $fs-p;
-   font-weight: 400;
-   line-height: 150%;
+    font-family: $montSerrat;
+    font-size: $fs-p;
+    font-weight: 400;
+    line-height: 150%;
 }
 .link {
-   color: $white;
-   font-weight: bold;
-   font-size: $fs-p;
-   transition: $transition;
+    color: $white;
+    font-weight: bold;
+    font-size: $fs-p;
+    transition: $transition;
 
-   &:hover {
-      opacity: 0.6;
-   }
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.bdd {
+    white-space: pre-wrap;
 }

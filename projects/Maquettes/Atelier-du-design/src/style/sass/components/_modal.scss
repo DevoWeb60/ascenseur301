@@ -1,0 +1,67 @@
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba($black, 0.2);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+
+    &.active {
+        display: block;
+    }
+
+    .modal-content {
+        height: calc(100vh - calc(30px * 2));
+        overflow-y: scroll;
+        position: relative;
+        color: $white;
+        background: $darkGrey;
+        box-shadow: 0 0 10px rgba($black, 0.3);
+        width: 50%;
+        padding: 30px;
+        margin: 30px auto;
+        border-bottom: 10px solid $darkGrey;
+
+        h2 {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .modal-img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $lightGrey;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: $darkGrey;
+        background: $white;
+        padding: 7px;
+        border-radius: 3px;
+        border: 2px solid $white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            color: $white;
+            background: $darkGrey;
+        }
+    }
+}

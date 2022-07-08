@@ -1,0 +1,73 @@
+#team-page {
+    h2 {
+        text-align: center;
+        color: $darkGrey;
+    }
+
+    .team-mates {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        gap: 30px;
+
+        .card {
+            background-color: $darkGrey;
+
+            .image-container {
+                overflow: hidden;
+                border: 2px solid $white;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .content {
+                h2,
+                p {
+                    text-align: left;
+                    color: $white;
+                }
+                h2 {
+                    margin: 15px 0;
+                }
+                padding: 20px;
+            }
+        }
+    }
+
+    #methods {
+        background: $darkGrey;
+        h2,
+        p,
+        h3 {
+            color: $white;
+        }
+
+        .method {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+
+            h3 {
+                font-size: 25px;
+                font-weight: 400;
+                font-family: $rozhaOne;
+                .number {
+                    font-size: 144px;
+                    margin-right: 30px;
+                }
+            }
+            p {
+                width: 45%;
+            }
+
+            &.invert {
+                align-items: flex-end;
+                text-align: right;
+            }
+        }
+    }
+}
