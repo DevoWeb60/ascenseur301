@@ -71,3 +71,24 @@
         }
     }
 }
+
+@media screen and (max-width: 770px) {
+    #team-page {
+        #methods .method {
+            h3 .number {
+                font-size: 80px;
+            }
+            p {
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #team-page {
+        .team-mates {
+            grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        }
+    }
+}

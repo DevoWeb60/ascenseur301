@@ -1,5 +1,5 @@
 header {
-    background-image: url("../../img/bg-header.jpg");
+    background-image: url("../../img/bg-header.webp");
     background-size: cover;
     background-position: center;
     padding: 10px;
@@ -26,6 +26,11 @@ header {
             flex-grow: 1;
             justify-content: flex-end;
 
+            #hamburger,
+            #close-menu {
+                display: none;
+            }
+
             ul {
                 display: flex;
 
@@ -38,11 +43,80 @@ header {
 
     .container {
         margin: 0 auto;
-        padding:0;
+        padding: 0;
         h2 {
             font-family: "Montserrat", sans-serif;
             color: $white;
             font-weight: bold;
         }
+    }
+}
+
+@media screen and (max-width: 890px) {
+    header {
+        div {
+            nav {
+                position: relative;
+
+                #close-menu,
+                #hamburger {
+                    color: $white;
+                    font-size: 35px;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+                #hamburger {
+                    display: block;
+                    justify-self: flex-end;
+
+                    &.hidden {
+                        display: none;
+                    }
+                }
+                #close-menu {
+                    position: fixed;
+                    top: 7px;
+                    right: 11px;
+                    z-index: 2000;
+                    font-size: 45px;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+
+                ul {
+                    display: none;
+
+                    &.active {
+                        position: fixed;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        height: 100vh;
+                        background: rgba(0, 0, 0, 0.7);
+                        z-index: 1000;
+                        margin: 0;
+
+                        li {
+                            padding: 30px;
+                            a {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header div h1 a img {
+        width: 150px;
     }
 }

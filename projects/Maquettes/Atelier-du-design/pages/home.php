@@ -29,7 +29,9 @@
 <?php foreach ($homeList as $element) : ?>
     <?php if (!empty($element->picture)) : ?>
         <section class="realize">
-            <img src="./src/img/<?= $element->picture ?>" alt="<?= $element->title ?>">
+            <div class="picture">
+                <img src="./src/img/<?= $element->picture ?>" alt="<?= $element->title ?>">
+            </div>
             <div class="content">
                 <h2><?= $element->title ?></h2>
                 <p class="bdd"><?= $element->content ?></p>

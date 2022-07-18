@@ -6,6 +6,8 @@
             </a>
         </h1>
         <nav>
+            <i id="hamburger" class="fa-solid fa-bars"></i>
+            <i id="close-menu" class="fas fa-times"></i>
             <ul>
                 <li><a class="link" href="<?= $pages['agence'] ?>">L'agence</a></li>
                 <li><a class="link" href="<?= $pages['equipe'] ?>">L'équipe</a></li>
@@ -15,8 +17,8 @@
         </nav>
     </div>
     <div class="container">
-        <h2>
-            L’expertise d’une équipe<br>pluridisciplinaire
-        </h2>
+        <?php if (!empty($siteInfo->slogan)) : ?>
+            <h2 class="bdd"><?= $siteInfo->slogan ?></h2>
+        <?php endif; ?>
     </div>
 </header>

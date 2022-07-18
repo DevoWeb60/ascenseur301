@@ -10,7 +10,9 @@
 <?php foreach ($agencyList as $element) : ?>
     <?php if (!empty($element->picture)) : ?>
         <section class="realize">
-            <img src="./src/img/<?= $element->picture ?>" alt="Atelier du design">
+            <div class="picture">
+                <img src="./src/img/<?= $element->picture ?>" alt="Atelier du design">
+            </div>
             <div class="content">
                 <?php if (!empty($element->title)) : ?>
                     <h2><?= $element->title ?></h2>

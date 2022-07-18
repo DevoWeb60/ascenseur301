@@ -1,24 +1,24 @@
 #agency-presentation {
-   color: $white;
-   background-image: linear-gradient(
-         to top,
-         rgba(0, 0, 0, 0.8),
-         rgba(0, 0, 0, 0.8)
-      ),
-      url("../../../src/img/annexes/Agence.jpg");
-   background-attachment: fixed;
-   background-size: cover;
-   background-position: center;
+    color: $white;
+    background-image: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)
+        ),
+        url("../../../src/img/annexes/Agence.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 
-   .content {
-      padding-left: 30px;
-      border-left: 3px solid $white;
+    .content {
+        padding-left: 30px;
+        border-left: 3px solid $white;
 
-      h2 {
-         text-align: center;
-      }
-      p {
-         white-space: pre-wrap;
-      }
-   }
+        h2 {
+            text-align: center;
+        }
+        p {
+            white-space: pre-wrap;
+        }
+    }
 }

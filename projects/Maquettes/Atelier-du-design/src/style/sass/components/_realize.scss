@@ -7,12 +7,15 @@
     color: $darkGrey;
 
     .content,
-    img {
+    .picture {
         width: 50%;
         height: 100%;
+        overflow: hidden;
     }
 
     img {
+        width: 100%;
+        aspect-ratio: 16 / 13;
         object-fit: cover;
     }
 
@@ -36,7 +39,7 @@
         .btn,
         .btn-red {
             align-self: flex-end;
-            width: 50%;
+
             @include btn($red, $white);
         }
     }
@@ -48,5 +51,72 @@
         .btn {
             @include btn($white, $red);
         }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .realize {
+        position: relative;
+        padding: 100px 0;
+        height: auto;
+        border-bottom: 2px solid $lightGrey;
+
+        &,
+        &:nth-child(odd) {
+            flex-direction: column-reverse;
+
+            .content {
+                color: $white;
+            }
+        }
+
+        .picture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            img {
+                transform: translateY(-25%);
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0.9) 0%,
+                    rgba(0, 0, 0, 0.9) 100%
+                );
+            }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1000;
+            top: 50%;
+            left: 0;
+            padding: 0;
+
+            p {
+                margin: 0;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .realize .content {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .realize .content {
+        width: 90%;
     }
 }

@@ -26,6 +26,7 @@
 
         h2 {
             margin-bottom: 15px;
+            margin-top: 50px;
             text-align: center;
         }
 
@@ -62,6 +63,14 @@
         &:hover {
             color: $white;
             background: $darkGrey;
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .overlay {
+        .modal-content {
+            width: 95%;
         }
     }
 }

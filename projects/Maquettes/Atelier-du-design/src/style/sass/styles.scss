@@ -73,7 +73,7 @@ p,
     font-family: $montSerrat;
     font-size: $fs-p;
     font-weight: 400;
-    line-height: 150%;
+    line-height: 170%;
 }
 .link {
     color: $white;
@@ -88,4 +88,11 @@ p,
 
 .bdd {
     white-space: pre-wrap;
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        width: 100%;
+        padding: 100px 30px;
+    }
 }

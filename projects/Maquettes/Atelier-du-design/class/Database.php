@@ -2,13 +2,13 @@
 
 class Database
 {
-    // private $username = "thibaultberthelin";
-    // private $password = "NOpWqDs2";
-    // private $database = "thibaultberthelin_";
-    private $username = "devoweb";
-    private $password = "root";
+    private $username = "thibaultberthelin";
+    private $password = "NOpWqDs2";
+    private $database = "thibaultberthelin_atelier-design";
+    // private $username = "devoweb";
+    // private $password = "root";
+    // private $database = "atelier-design";
     private $host = "localhost:3306";
-    private $database = "atelier-design";
     private $charset = 'utf8';
     private $db;
 

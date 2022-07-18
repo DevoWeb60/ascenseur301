@@ -59,3 +59,25 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px) {
+    #reels {
+        .reels-filter {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr;
+        }
+        .filter {
+            ul {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+                li {
+                    width: calc(1200px / 4);
+                }
+            }
+        }
+        .galery {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+}
