@@ -3,17 +3,20 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php $baseURL = "http://" . $_SERVER['HTTP_HOST'] . "/projects/PHP/includes/"; ?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <title> <?= $title ?></title>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="<?= $baseURL ?>css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="<?= $baseURL ?>js/jquery-1.11.0.min.js"></script>
     <!-- Custom Theme files -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <link href="<?= $baseURL ?>css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="<?= $baseURL ?>css/flexslider.css" type="text/css" media="screen" />
+    <base href="<?= $baseURL ?>" />
     <!-- Custom Theme files -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/php; charset=utf-8" />

@@ -2,9 +2,9 @@
 
 class Database
 {
-    private $username = "thibaultberthelin";
-    private $password = "NOpWqDs2";
-    private $database = "thibaultberthelin_atelier-design";
+    private $username = "root";
+    private $password = "root";
+    private $database = "atelier_design";
     // private $username = "devoweb";
     // private $password = "root";
     // private $database = "atelier-design";

@@ -1,66 +1,71 @@
 <!DOCTYPE html>
 <html lang="fr">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="style/css/styles.min.css" />
-      <script
-         src="https://kit.fontawesome.com/8ce2cffc6a.js"
-         crossorigin="anonymous"
-      ></script>
-      <title>Question pour un con</title>
-   </head>
-   <body>
-      <div class="background">
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-      </div>
-      <header>
-         <h1><img src="../../../views/assets/favicon.png" alt="SSJB" /></h1>
-         <h2>Question pour un con</h2>
-         <h2 class="datetime">00:00</h2>
-      </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style/css/styles.min.css" />
+        <base href="/projects/JavaScript/question_con/" />
+        <script
+            src="https://kit.fontawesome.com/8ce2cffc6a.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Question pour un con</title>
+    </head>
+    <body>
+        <div class="background">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <header>
+            <h1><img src="../../../views/assets/favicon.png" alt="SSJB" /></h1>
+            <h2>Question pour un con</h2>
+            <h2 class="datetime">00:00</h2>
+        </header>
 
-      <div class="container">
-         <h4 class="countQuestion"></h4>
-         <h2 class="question">Question</h2>
-         <h4 class="answer">Réponse</h4>
-         <div class="btn-container">
-            <button id="show-answer">Voir la réponse</button>
-            <button id="restart">Recommencer</button>
-            <button id="next-question">Question suivante</button>
-         </div>
-         <div class="modalContainer">
-            <form>
-               <h2>Ajouter une question</h2>
-               <input type="text" id="newQuestion" placeholder="Question" />
-               <input type="text" id="newAnswer" placeholder="Réponse" />
-               <button type="submit">Ajouter</button>
-            </form>
-         </div>
-         <div class="addQuestionPopup">
-            <i class="fas fa-plus"></i>
-         </div>
-      </div>
-      <script src="app.js" defer></script>
-   </body>
+        <div class="container">
+            <h4 class="countQuestion"></h4>
+            <h2 class="question">Question</h2>
+            <h4 class="answer">Réponse</h4>
+            <div class="btn-container">
+                <button id="show-answer">Voir la réponse</button>
+                <button id="restart">Recommencer</button>
+                <button id="next-question">Question suivante</button>
+            </div>
+            <div class="modalContainer">
+                <form>
+                    <h2>Ajouter une question</h2>
+                    <input
+                        type="text"
+                        id="newQuestion"
+                        placeholder="Question"
+                    />
+                    <input type="text" id="newAnswer" placeholder="Réponse" />
+                    <button type="submit">Ajouter</button>
+                </form>
+            </div>
+            <div class="addQuestionPopup">
+                <i class="fas fa-plus"></i>
+            </div>
+        </div>
+        <script src="app.js" defer></script>
+    </body>
 </html>

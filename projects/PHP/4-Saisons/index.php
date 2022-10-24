@@ -18,6 +18,7 @@ $saisons = json_decode($saisons);
    <meta charset="UTF-8" />
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <base href="/projects/PHP/4-Saisons/" />
    <link rel="shortcut icon" href="../../../views/assets/favicon.png" type="image/x-icon" />
    <script src="https://kit.fontawesome.com/8ce2cffc6a.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="./src/style/css/styles.min.css" />

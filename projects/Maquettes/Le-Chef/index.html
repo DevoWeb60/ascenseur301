@@ -1,148 +1,181 @@
 <!DOCTYPE html>
 <html lang="fr">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link
-         rel="shortcut icon"
-         href="../../../views/assets/favicon.png"
-         type="image/x-icon"
-      />
-      <script
-         src="https://kit.fontawesome.com/8ce2cffc6a.js"
-         crossorigin="anonymous"
-      ></script>
-      <link rel="stylesheet" href="./src/style/css/styles.min.css" />
-      <title>Le Chef</title>
-   </head>
-   <body>
-      <!-- !HEADER -->
-      <header>
-         <div class="container">
-            <h1>
-               <a href="index.html">
-                  <img src="./src/img/Logo.svg" alt="Vous êtes le chef" />
-               </a>
-            </h1>
-            <nav>
-               <ul>
-                  <li><a href="#">Comment ça marche&nbsp;?</a></li>
-                  <li><a href="#">Qui sommes-nous&nbsp;?</a></li>
-                  <li><a href="#">Les abonnements </a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#" class="btn">Connexion</a></li>
-               </ul>
-            </nav>
-            <i class="fas fa-bars" id="hamburger"></i>
-         </div>
-      </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <base href="/projects/Maquettes/Le-Chef/" />
 
-      <!-- !HERO  -->
-      <div id="hero">
-         <div>
-            <h2>
-               Vous en réviez&nbsp;? <br />
-               Devenez patissier&nbsp;!
-            </h2>
-            <p>
-               Obtenez les secrets les mieux gardés des meilleurs chefs
-               pâtissiers
-            </p>
-            <a href="#" class="btn">Je m'abonne</a>
-         </div>
-      </div>
-
-      <!-- !ABOUT -->
-      <div id="about" class="bg-white">
-         <div class="container">
-            <img src="./src/img/fouet.webp" alt="Fouet" />
-            <h2>
-               Une box, une recette de pâtisserie, <br />
-               <span class="pink">c'est aussi simple que ça&nbsp;!</span>
-            </h2>
-            <a href="#" class="btn">Comment ça marche&nbsp;?</a>
-         </div>
-      </div>
-
-      <!-- !SECRET  -->
-      <div class="container" id="secret">
-         <div class="content">
-            <h2 class="caps">
-               Épatez et régalez vos proches nous vous emboîtons les secrets les
-               plus gardés
-               <span class="pink">des meilleurs chefs pâtissiers</span>
-            </h2>
-            <p>
-               *Chaque mois je surprends mes amis et ma famille avec la box du
-               chef&nbsp;! Un vrai rendez vous à ne pas manquer*
-            </p>
-            <a href="#" class="btn">Comment ça marche&nbsp;?</a>
-         </div>
-         <img src="./src/img/famille.webp" alt="Famille" />
-      </div>
-
-      <!-- !BOX  -->
-      <div id="box" class="bg-white">
-         <div class="container">
-            <h2 class="caps">
-               Ce que vous allez trouver
-               <span class="pink">dans une box</span>
-            </h2>
-            <div class="cards">
-               <div class="card">
-                  <img src="./src/img/ustensiles.webp" alt="ustensiles" />
-                  <h3 class="caps bold">Ustensile</h3>
-                  <p>
-                     Des ustensiles utiles au bon processus de la recette sont
-                     inclus dans la box
-                  </p>
-               </div>
-               <div class="card">
-                  <img src="./src/img/recette.webp" alt="ustensibles" />
-                  <h3 class="caps bold">Recette du chef</h3>
-                  <p>
-                     Une recette de pâtisserie exclusive décrite pas à pas avec
-                     toutes les astuces qui font la différence
-                  </p>
-               </div>
-               <div class="card">
-                  <img src="./src/img/ingredients.webp" alt="ustensibles" />
-                  <h3 class="caps bold">Ingrédients</h3>
-                  <p>
-                     Nous sélectionnons des ingrédients de qualité pour mener à
-                     bien les recettes
-                  </p>
-               </div>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="../../../views/assets/favicon.png"
+            type="image/x-icon"
+        />
+        <script
+            src="https://kit.fontawesome.com/8ce2cffc6a.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="./src/style/css/styles.min.css" />
+        <title>Le Chef</title>
+    </head>
+    <body>
+        <!-- !HEADER -->
+        <header>
+            <div class="container">
+                <h1>
+                    <a href="index.html">
+                        <img src="./src/img/Logo.svg" alt="Vous êtes le chef" />
+                    </a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">Comment ça marche&nbsp;?</a></li>
+                        <li><a href="#">Qui sommes-nous&nbsp;?</a></li>
+                        <li><a href="#">Les abonnements </a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#" class="btn">Connexion</a></li>
+                    </ul>
+                </nav>
+                <i class="fas fa-bars" id="hamburger"></i>
             </div>
-         </div>
-      </div>
+        </header>
 
-      <!-- !SUBSCRIBE -->
-      <div id="subscribe" class="container">
-         <img src="./src/img/professionnel.webp" alt="Professionnel" />
-         <div class="content">
-            <h2 class="caps">
-               N’attendez plus de découvrez
-               <span class="pink">vite votre premier box</span>
-            </h2>
-            <p>*Découvrez nos recettes de pâtisserie exclusives, nées de nos expériences aux côtés de grands chefs afin de développer, vous aussi votre propre savoir-faire pâtissier*</p>
-            <a href="#" class="btn">Je m'abonne</a>
+        <!-- !HERO  -->
+        <div id="hero">
+            <div>
+                <h2>
+                    Vous en réviez&nbsp;? <br />
+                    Devenez patissier&nbsp;!
+                </h2>
+                <p>
+                    Obtenez les secrets les mieux gardés des meilleurs chefs
+                    pâtissiers
+                </p>
+                <a href="#" class="btn">Je m'abonne</a>
+            </div>
+        </div>
 
-         </div>
-      </div>
+        <!-- !ABOUT -->
+        <div id="about" class="bg-white">
+            <div class="container">
+                <img src="./src/img/fouet.webp" alt="Fouet" />
+                <h2>
+                    Une box, une recette de pâtisserie, <br />
+                    <span class="pink">c'est aussi simple que ça&nbsp;!</span>
+                </h2>
+                <a href="#" class="btn">Comment ça marche&nbsp;?</a>
+            </div>
+        </div>
 
-      <!-- !FOOTER -->
-      <footer class="bg-white">
-         <ul class="container">
-            <li><a href=""><i class="fas fa-gift"></i><p class="small-caps">Offrir un cadeau original</p></a></li>
-            <li><a href=""><i class="fas fa-map-marker-alt"></i><p class="small-caps">Expédition suivie</p></a></li>
-            <li><a href=""><i class="fas fa-home"></i><p class="small-caps">Réception à domicile</p></a></li>
-            <li><a href=""><i class="fas fa-shield-alt"></i><p class="small-caps">Paiement sécurisé</p></a></li>
-            <li><a href=""><i class="fas fa-bell"></i><p class="small-caps">Une box par mois</p></a></li>
-         </ul>
-      </footer>
+        <!-- !SECRET  -->
+        <div class="container" id="secret">
+            <div class="content">
+                <h2 class="caps">
+                    Épatez et régalez vos proches nous vous emboîtons les
+                    secrets les plus gardés
+                    <span class="pink">des meilleurs chefs pâtissiers</span>
+                </h2>
+                <p>
+                    *Chaque mois je surprends mes amis et ma famille avec la box
+                    du chef&nbsp;! Un vrai rendez vous à ne pas manquer*
+                </p>
+                <a href="#" class="btn">Comment ça marche&nbsp;?</a>
+            </div>
+            <img src="./src/img/famille.webp" alt="Famille" />
+        </div>
 
-      <script src="main.js" type="module"></script>
-   </body>
+        <!-- !BOX  -->
+        <div id="box" class="bg-white">
+            <div class="container">
+                <h2 class="caps">
+                    Ce que vous allez trouver
+                    <span class="pink">dans une box</span>
+                </h2>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./src/img/ustensiles.webp" alt="ustensiles" />
+                        <h3 class="caps bold">Ustensile</h3>
+                        <p>
+                            Des ustensiles utiles au bon processus de la recette
+                            sont inclus dans la box
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img src="./src/img/recette.webp" alt="ustensibles" />
+                        <h3 class="caps bold">Recette du chef</h3>
+                        <p>
+                            Une recette de pâtisserie exclusive décrite pas à
+                            pas avec toutes les astuces qui font la différence
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img
+                            src="./src/img/ingredients.webp"
+                            alt="ustensibles"
+                        />
+                        <h3 class="caps bold">Ingrédients</h3>
+                        <p>
+                            Nous sélectionnons des ingrédients de qualité pour
+                            mener à bien les recettes
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- !SUBSCRIBE -->
+        <div id="subscribe" class="container">
+            <img src="./src/img/professionnel.webp" alt="Professionnel" />
+            <div class="content">
+                <h2 class="caps">
+                    N’attendez plus de découvrez
+                    <span class="pink">vite votre premier box</span>
+                </h2>
+                <p>
+                    *Découvrez nos recettes de pâtisserie exclusives, nées de
+                    nos expériences aux côtés de grands chefs afin de
+                    développer, vous aussi votre propre savoir-faire pâtissier*
+                </p>
+                <a href="#" class="btn">Je m'abonne</a>
+            </div>
+        </div>
+
+        <!-- !FOOTER -->
+        <footer class="bg-white">
+            <ul class="container">
+                <li>
+                    <a href=""
+                        ><i class="fas fa-gift"></i>
+                        <p class="small-caps">Offrir un cadeau original</p></a
+                    >
+                </li>
+                <li>
+                    <a href=""
+                        ><i class="fas fa-map-marker-alt"></i>
+                        <p class="small-caps">Expédition suivie</p></a
+                    >
+                </li>
+                <li>
+                    <a href=""
+                        ><i class="fas fa-home"></i>
+                        <p class="small-caps">Réception à domicile</p></a
+                    >
+                </li>
+                <li>
+                    <a href=""
+                        ><i class="fas fa-shield-alt"></i>
+                        <p class="small-caps">Paiement sécurisé</p></a
+                    >
+                </li>
+                <li>
+                    <a href=""
+                        ><i class="fas fa-bell"></i>
+                        <p class="small-caps">Une box par mois</p></a
+                    >
+                </li>
+            </ul>
+        </footer>
+
+        <script src="main.js" type="module"></script>
+    </body>
 </html>
